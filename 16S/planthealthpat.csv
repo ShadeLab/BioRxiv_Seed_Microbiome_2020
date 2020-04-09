@@ -1,0 +1,25 @@
+Plant Name,Treatment,Shoot_mass_g,Pod_mass_g,N_pods,Root_mass_g
+C1,Control,3.5,3.78,7,3.22
+C2,Control,4.28,5.45,10,4.55
+C3,Control,5.42,2.37,6,3.63
+C4,Control,4.75,5.08,4,-1.08
+C5,Control,3.29,2.21,7,4.79
+C6,Control,5.33,2.48,6,3.52
+C7,Control,2.85,2.6,6,3.4
+C8,Control,5.41,3.25,7,3.75
+D1,Water withholding,2.92,2.51,6,3.49
+D2,Water withholding,2.82,0.52,2,1.48
+D3,Water withholding,0.86,0.8,6,5.2
+D4,Water withholding,1.82,1.07,4,2.93
+D5,Water withholding,2.77,1.39,6,4.61
+D6,Water withholding,1.01,1.47,5,3.53
+D7,Water withholding,1.15,1.15,2,0.85
+D8,Water withholding,0.99,1.79,3,1.21
+N1,Nutrient addition,20.78,15.33,39,23.67
+N2,Nutrient addition,34.38,4.06,9,4.94
+N3,Nutrient addition,19.86,7.4,21,13.6
+N4,Nutrient addition,22.51,10.75,24,13.25
+N5,Nutrient addition,29.51,8.49,18,9.51
+N6,Nutrient addition,27.72,4.97,16,11.03
+N7,Nutrient addition,12.42,8.83,15,6.17
+N8,Nutrient addition,17.14,10.55,15,4.45
