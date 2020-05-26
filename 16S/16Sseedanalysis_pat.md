@@ -3,6 +3,9 @@
 ## Analysis of 16S Miseq Data
 Here we used the USEARCH pipeline (v10.0.240_i86linux64) for pre-processing raw sequences data and UPARSE method for OTU clustering (Edgar 2013). Additional analyses were conducted using QIIME
 
+## All analysis results are stored on hpcc: 
+"/mnt/research/ShadeLab/WorkingSpace/Bintarti/PatSeedData/newseedtest"
+
 # Part I: Clustering
 
 usearch v10.0.240_i86linux64, 16.3Gb RAM, 4 cores
@@ -128,46 +131,132 @@ cat SILVA_closed_reference.fasta denovo_otus.fasta > FULL_REP_SET.fna
 /mnt/research/rdp/public/thirdParty/usearch11.0.667_i86linux64  -usearch_global mergedfastq/merged.fq -db FULL_REP_SET.fna -strand plus -id 0.97 -uc OTU_map.uc -otutabout OTU_table.txt -biomout OTU_jsn.biom
 
 ### output ###
-961230 / 962109 mapped to OTUs (99.9%) 
+961230 / 962109 mapped to OTUs (99.9%)
+OTU_table.txt
+OTU_jsn.biom
 ```
 # Part II: Switch to QIIME 1.9.1
 
-## 1) Assign taxonomy to SILVA_132_QIIME_release with UCLUSTq
-```
-assign_taxonomy.py -i FULL_REP_SET.fna -o taxonomy -r /mnt/home/bintarti/SILVA_132_QIIME_release/rep_set/rep_set_16S_only/97/silva_132_97_16S.fna -t /mnt/home/bintarti/SILVA_132_QIIME_release/taxonomy/16S_only/97/taxonomy_7_levels.txt
-#-r reference -> path to silva db 
-# -t taxonomy
-```
-## 2) Convert OTU_table.txt. to OTU_table.from_txt_json.biom
+
+## 1) Convert OTU_table.txt. to OTU_table.from_txt_json.biom
 ```
 biom convert -i OTU_table.txt -o OTU_table.biom --table-type="OTU table" --to-json
-```
-## 3) Add taxonomy to OTU table
-```
-biom add-metadata -i OTU_table.biom -o OTU_table_tax.biom --observation-metadata-fp=taxonomy/FULL_REP_SET_tax_assignments.txt --sc-separated=taxonomy --observation-header=OTUID,taxonomy
-```
-## 4) Filter non-bacteria/archaea
-```
-filter_taxa_from_otu_table.py -i OTU_table_tax.biom -o OTU_table_tax_filt.biom -n D_4__Mitochondria,D_3__Chloroplast,Unassigned
 
-# summarize OTU table
+### output ###
+OTU_table.biom
+```
+## 2) Align sequences to SILVA_132_QIIME_release with PyNAST 
+```
+align_seqs.py -i FULL_REP_SET.fna -o alignment -t /mnt/home/bintarti/SILVA_132_QIIME_release/core_alignment/80_core_alignment.fna
 
+### output ###
+alignment/FULL_REP_SET_aligned.fasta
+alignment/FULL_REP_SET_failures.fasta
+alignment/FULL_REP_SET_log.txt
+```
+## 3) Filter failed alignment from OTU table
+```
+#Discard all OTUs listed in FULL_REP_SET_failures.fasta from OTU table
+filter_otus_from_otu_table.py -i OTU_table.biom -o OTU_filteredfailedalignments.biom -e alignment/FULL_REP_SET_failures.fasta
+
+#from FULL_REP_SET.fna file
+filter_fasta.py -f FULL_REP_SET.fna -o FULL_REP_SET_filteredfailedalignments.fa -a alignment/FULL_REP_SET_aligned.fasta
+
+### output ###
+OTU_filteredfailedalignments.biom
+FULL_REP_SET_filteredfailedalignments.fa
+```
+## 4) Assign taxonomy to SILVA_132_QIIME_release with UCLUST
+```
+assign_taxonomy.py -i FULL_REP_SET_filteredfailedalignments.fa -o taxonomy -r /mnt/home/bintarti/SILVA_132_QIIME_release/rep_set/rep_set_16S_only/97/silva_132_97_16S.fna -t /mnt/home/bintarti/SILVA_132_QIIME_release/taxonomy/16S_only/97/taxonomy_7_levels.txt
+#-r reference -> path to silva db 
+# -t taxonomy
+
+### output ###
+taxonomy/FULL_REP_SET_filteredfailedalignments_tax_assignments.txt
+taxonomy/FULL_REP_SET_filteredfailedalignments_tax_assignments.log
+```
+## 5) Add taxonomy to OTU table
+```
+echo "#OTUID"$'\t'"taxonomy"$'\t'"confidence" > templine.txt
+
+cat templine.txt taxonomy/FULL_REP_SET_filteredfailedalignments_tax_assignments.txt >> taxonomy/FULL_REP_SET_filteredfailedalignments_tax_assignments_header.txt
+
+biom add-metadata -i OTU_filteredfailedalignments.biom -o OTU_table_tax.biom --observation-metadata-fp=taxonomy/FULL_REP_SET_filteredfailedalignments_tax_assignments_header.txt  --sc-separated=taxonomy --observation-header=OTUID,taxonomy
+
+### output ###
+OTU_table_tax.biom
+```
+## 6) Filter non-bacteria/archaea
+```
+filter_taxa_from_otu_table.py -i OTU_table_tax.biom -o OTU_table_tax_filt.biom -n D_4__Mitochondria,D_3__Chloroplast,Chlorophyta,Unassigned
+
+#remove same Mito and Chloro sequences from RepSeqs file
+filter_fasta.py -f FULL_REP_SET_filteredfailedalignments.fa -o FULL_REP_SET_filteredfailedalignments_rmCM.fa -b OTU_table_tax_filt.biom 
+
+#summarize OTU table
+#1.original
 biom summarize-table -i OTU_table_tax.biom -o OTU_table_tax_sum.txt
-
+#2.filtered
 biom summarize-table -i OTU_table_tax_filt.biom -o OTU_table_tax_filt_sum.txt
+
+#optional sanity check:  count seqs in new fasta, and check that it has fewer than original
+#orginal
+count_seqs.py -i FULL_REP_SET_filteredfailedalignments.fa
+#filtered
+count_seqs.py -i FULL_REP_SET_filteredfailedalignments_rmCM.fa
+
+### output ###
+OTU_table_tax_filt.biom
+FULL_REP_SET_filteredfailedalignments_rmCM.fa
+OTU_table_tax_sum.txt
+OTU_table_tax_filt_sum.txt
 ```
-## Rarefaction
+## 7) Rarefaction
 ```
-single_rarefaction.py -d 11138 -o single_rare.biom -i OTU_table_tax_filt.biom
+single_rarefaction.py -d 11137 -o single_rare.biom -i OTU_table_tax_filt.biom
 
 biom summarize-table -i single_rare.biom -o single_rare_sum.txt
-```
-## 5) Convert and add taxonomy
-```
-biom convert -i single_rare.biom -o single_rare_filt.txt --header-key taxonomy --to-tsv
-```
 
+### output ###
+single_rare.biom
+single_rare_sum.txt
+```
+## 8) Summarize global taxonomic data
+```
+summarize_taxa.py -i OTU_table_tax_filt.biom -o taxa_sum
 
+### output ###
+taxa_sum/
+```
+## 9) Make phylogeny with FastTree
+```
+#First, clean alignment by omitting highly variable regions before tree building - will make tree building more efficient
+filter_alignment.py -i alignment/FULL_REP_SET_aligned.fasta -o alignment/filtered_alignment
+
+#make phylogeny and root tree
+make_phylogeny.py -i alignment/filtered_alignment/FULL_REP_SET_aligned_pfiltered.fasta -o rep_set.tre -r tree_method_default
+
+### output ###
+alignment/filtered_alignment/FULL_REP_SET_aligned_pfiltered.fasta
+rep_set.tre
+```
+## 10) Calculate global alpha and beta diversity
+```
+beta_diversity.py -m bray_curtis,unweighted_unifrac,weighted_unifrac -i single_rare.biom -o beta_div -t rep_set.tre
+
+principal_coordinates.py -i beta_div -o coords
+
+#alpha
+alpha_diversity.py -m PD_whole_tree -i single_rare.biom -o alpha -t rep_set.tre
+```
+## 11) Convert and add taxonomy
+```
+biom convert -i single_rare.biom -o single_rare.txt --header-key taxonomy --to-tsv
+
+### output ###
+single_rare.txt
+```
 
 
 

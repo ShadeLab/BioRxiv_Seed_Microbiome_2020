@@ -11,6 +11,9 @@ raw sequence data stored on HPCC
 Moved/copy raw sequences (22 samples: 8 control, 7 water withholding, 7 nutrient addition) to the working space:
 /mnt/research/ShadeLab/WorkingSpace/Bintarti/PatSeedData/newseedtest_its
 
+## All analysis results are stored on hpcc: 
+"/mnt/research/ShadeLab/WorkingSpace/Bintarti/PatSeedData/newseedtest_its"
+
 ### 1. Quality checking and pre-filtering
 ```
 # count read numbers
