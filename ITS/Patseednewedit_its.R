@@ -233,7 +233,7 @@ fg.genus <- ggplot(data=df.fg, aes(x=Sample, y=Mean, fill=Genus))
 barplot.fg.genus <- fg.genus + 
                      geom_bar(aes(), stat="identity", position="fill") + 
                      #scale_fill_manual(values=c('#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#911eb4', '#46f0f0', '#f032e6', '#bcf60c','#f58231', '#fabebe', '#008080', '#e6beff', '#9a6324', '#fffac8', '#800000', '#aaffc3', '#808000', '#ffd8b1', '#000075', '#808080', 'lightslateblue', '#000000', 'tomato','hotpink2'))+
-                     scale_fill_manual(values=c('#911eb4','#ffd8b1','#008080','tomato','#4363d8'))+
+                     scale_fill_manual(values=c("#CC6677", "#DDCC77", "#117733", "#332288","#AA4499", "#888888"))+
                      theme(legend.position="bottom") + 
                      guides(fill=guide_legend(nrow=5))+
                      labs(title="B. Fungi",y= "Mean Relative Abundance")+
@@ -256,7 +256,7 @@ barplot.fg.genus <- fg.genus +
                            panel.border = element_rect(colour = "black", fill = NA, size = 0.2))+
                            labs(fill="Genus")+
                            facet_grid(~Treatment, switch = "x", scales = "free_x")+
-                           guides(fill=guide_legend(nrow=2,byrow=TRUE))
+                           guides(fill=guide_legend(nrow=3,byrow=TRUE))
 barplot.fg.genus
 # other: either the taxa cannot be classified after Domain or unaasigned taxa.
 ggsave("040620_ITS_barplot_patdata.eps",
@@ -280,14 +280,13 @@ ax2.scores.its=otu_its_pcoa$points[,2]
 ax1.its <- otu_its_pcoa$eig[1]/sum(otu_its_pcoa$eig)
 ax2.its <- otu_its_pcoa$eig[2]/sum(otu_its_pcoa$eig)
 map.its=cbind(map.pat.its,ax1.scores.its,ax2.scores.its)
-library(ggrepel)
-mult <-.25
-myCol <- c('#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#911eb4', '#46f0f0', '#f032e6', '#bcf60c', '#fabebe', '#008080', '#e6beff', '#9a6324', '#fffac8', '#800000', '#aaffc3', '#808000', '#ffd8b1', '#000075', '#808080', '#ffffff', '#000000')
+
 # PCoA Plot by site
 its.pcoa <- ggplot(data = map.its, aes(x=ax1.scores.its, y=ax2.scores.its))+
   theme_bw()+
-  geom_point(data = map.its, aes(x = ax1.scores.its, y = ax2.scores.its, color=Treatment),size=5,shape=20, alpha=0.5)+
-  scale_colour_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c('#4363d8', 'tomato', '#008080'))+
+  geom_point(data = map.its, aes(x = ax1.scores.its, y = ax2.scores.its, color=Treatment, shape=Treatment),size=5, alpha=0.8)+
+  scale_shape_manual(labels = c("Control", "Water withholding", "Nutrient addition"), values = c(16, 15, 17))+
+  scale_colour_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c("#CC6677", "#DDCC77","#117733"))+
   scale_x_continuous(name=paste("PCoA1: ",round(ax1.its,3)*100,"% var. explained", sep=""))+
   scale_y_continuous(name=paste("PCoA2: ",round(ax2.its,3)*100,"% var. explained", sep=""))+
   coord_fixed() + 
@@ -327,7 +326,7 @@ mapPat.its.bc=cbind(map.pat.its,ax1.scores.its.bc,ax2.scores.its.bc)
 # PCoA Plot by site
 pat.pcoa.its.bc <- ggplot(data = mapPat.its.bc, aes(x=ax1.scores.its.bc, y=ax2.scores.its.bc))+
   theme_bw()+
-  geom_point(data = mapPat.its.bc, aes(x = ax1.scores.its.bc, y = ax2.scores.its.bc, color=Treatment),size=5,shape=20, alpha=0.5)+
+  geom_point(data = mapPat.its.bc, aes(x = ax1.scores.its.bc, y = ax2.scores.its.bc, shape=Treatment, color=Treatment),size=5, alpha=0.5)+
   scale_colour_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c('#e6194b', '#3cb44b', '#ffe119'))+
   scale_x_continuous(name=paste("PCoA1: ",round(ax1,3)*100,"% var. explained", sep=""))+
   scale_y_continuous(name=paste("PCoA2: ",round(ax2,3)*100,"% var. explained", sep=""))+

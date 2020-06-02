@@ -22,7 +22,7 @@ install.packages("userfriendlyscience")
 install.packages("ggpmisc")
 install.packages("fitdistrplus")
 install.packages('BiocManager')
-install.packages("cowplot")
+#install.packages("cowplot")
 install.packages("dplyr")
 install.packages("data.table")
 library(BiocManager)
@@ -248,7 +248,7 @@ ggsave("alpha.tiff",
 BiocManager::install("phyloseq")
 library(phyloseq)
 taxonomy.rare.pat = read.csv("taxa.rare.edit2.csv", header=T)
-View(taxonomy.rare.pat)
+#View(taxonomy.rare.pat)
 dim(taxonomy.rare.pat)
 rownames(taxonomy.rare.pat) <- rownames(otu.rare.pat)
 # make phyloseq otu table and taxonomy
@@ -293,6 +293,24 @@ other <- mean.relabund.genus[(mean <= 0.05), Genus := "other < 5%"]
 tot.genus.abundance <- df.bac.genus %>%
   group_by(Sample) %>%
   summarise(tot.abund=sum(Abundance)) 
+ 
+# calculating mean relative abundance per sample
+mean.genusrelabund.persample= df.bac.genus %>%
+  group_by(Sample, Treatment, Genus) %>%
+  summarise(ra=mean(Abundance)) 
+
+mean.genusrelabund.persample %>%
+  group_by(Sample) %>%
+  summarise(sum(ra))
+
+# calculating mean relative abundance per treatment
+mean.genusrelabund.pertreat= df.bac.genus %>%
+  group_by(Treatment, Genus) %>%
+  summarise(ra=mean(Abundance))
+
+mean.genusrelabund.pertreat %>%
+  group_by(Treatment) %>%
+  summarise(sum(ra))
 
 ## OR USE DPLYR
 
@@ -305,11 +323,16 @@ df.bac$Genus <- as.character(df.bac$Genus)
 df.bac$Genus[df.bac$Mean < 0.01] <- "Other (mean relative abundance < 1%)"
 df.bac$Treatment = factor(df.bac$Treatment, levels=c('Control','Water withholding','Nutrient addition'))
 # 1. barplot of bacterial/archaeal composition across samples
+library(rcartocolor)
+display_carto_all(colorblind_friendly = TRUE)
+my_colors = carto_pal(7, "Safe")
+my_colors
+
 genus <- ggplot(data=df.bac, aes(x=Sample, y=Mean, fill=Genus))
 barplot.genus <- genus + 
                      geom_bar(aes(), stat="identity", position="fill") + 
                      #scale_fill_manual(values=c('#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#911eb4', '#46f0f0', '#f032e6', '#bcf60c','#f58231', '#fabebe', '#008080', '#e6beff', '#9a6324', '#fffac8', '#800000', '#aaffc3', '#808000', '#ffd8b1', '#000075', '#808080', 'lightslateblue', '#000000', 'tomato','hotpink2'))+
-                     scale_fill_manual(values=c('#911eb4','#ffd8b1','#008080','tomato','#4363d8'))+
+                     scale_fill_manual(values=c("#CC6677", "#DDCC77", "#117733", "#332288","#AA4499", "#888888"))+
                      theme(legend.position="bottom") + 
                      guides(fill=guide_legend(nrow=5))+
                      labs(title="A. Bacteria/archaea",y= "Mean Relative Abundance")+
@@ -333,7 +356,7 @@ barplot.genus <- genus +
                            facet_grid(~Treatment, switch = "x", scales = "free_x")+
                            guides(fill=guide_legend(nrow=2,byrow=TRUE))
                            
-
+barplot.genus
 ggsave("041620_16S_barplot.eps",
       barplot.genus, device = "eps",
        width = 11, height =5, 
@@ -421,14 +444,13 @@ ax2.scores=otu_pcoa$points[,2]
 ax1 <- otu_pcoa$eig[1]/sum(otu_pcoa$eig)
 ax2 <- otu_pcoa$eig[2]/sum(otu_pcoa$eig)
 mapPat=cbind(map.pat,ax1.scores,ax2.scores)
-library(ggrepel)
-mult <-.25
-myCol <- c('#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#911eb4', '#46f0f0', '#f032e6', '#bcf60c', '#fabebe', '#008080', '#e6beff', '#9a6324', '#fffac8', '#800000', '#aaffc3', '#808000', '#ffd8b1', '#000075', '#808080', '#ffffff', '#000000')
+
 # PCoA Plot by site
 pat.pcoa <- ggplot(data = mapPat, aes(x=ax1.scores, y=ax2.scores))+
   theme_bw()+
-  geom_point(data = mapPat, aes(x = ax1.scores, y = ax2.scores, color=Treatment),size=5,shape=20, alpha=0.5)+
-  scale_colour_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c('#4363d8','tomato','#008080'))+
+  geom_point(data = mapPat, aes(x = ax1.scores, y = ax2.scores,shape=Treatment, color=Treatment),size=5, alpha=0.8)+
+  scale_shape_manual(labels = c("Control", "Water withholding", "Nutrient addition"), values = c(16, 15, 17))+
+  scale_colour_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c("#CC6677", "#DDCC77","#117733"))+
   scale_x_continuous(name=paste("PCoA1: ",round(ax1,3)*100,"% var. explained", sep=""))+
   scale_y_continuous(name=paste("PCoA2: ",round(ax2,3)*100,"% var. explained", sep=""))+
   coord_fixed() + 
@@ -531,7 +553,7 @@ label <- c("Control","Water\nwithholding","Nutrient\naddition")
 # plot
 shoot<-ggplot(map.pat, aes(x=factor(Treatment, level=level_order), y=Shoot_mass_g, fill=Treatment)) +
   geom_boxplot()+
-  scale_fill_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c('#4363d8', '#008080', 'tomato'))+
+  scale_fill_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c("#CC6677", "#117733","#DDCC77"))+
   geom_jitter(position = position_jitter(width = 0.1, height = 0, seed=13), alpha=0.5)+
   theme_bw()+
   expand_limits(x = 0, y = 0)+
@@ -591,7 +613,7 @@ root_plant.summ
 # plot
 root<-ggplot(map.pat, aes(x=factor(Treatment, level=level_order), y=Root_mass_g, fill=Treatment)) +
   geom_boxplot()+
-  scale_fill_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c('#4363d8', '#008080', 'tomato'))+
+  scale_fill_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c("#CC6677", "#117733","#DDCC77"))+
   geom_jitter(position = position_jitter(width = 0.1, height = 0, seed=13), alpha=0.5)+
   theme_bw()+
   expand_limits(x = 0, y = 0)+
@@ -651,7 +673,7 @@ podmass_plant.summ
 # plot
 podmass<-ggplot(map.pat, aes(x=factor(Treatment, level=level_order), y=Pod_mass_g, fill=Treatment)) +
   geom_boxplot()+
-  scale_fill_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c('#4363d8', '#008080', 'tomato'))+
+  scale_fill_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c("#CC6677", "#117733","#DDCC77"))+
   geom_jitter(position = position_jitter(width = 0.1, height = 0, seed=13), alpha=0.5)+
   theme_bw()+
   expand_limits(x = 0, y = 0)+
@@ -708,7 +730,7 @@ podnum_plant.summ
 # plot
 podnum<-ggplot(map.pat, aes(x=factor(Treatment, level=level_order), y=N_pods, fill=Treatment)) +
   geom_boxplot()+
-  scale_fill_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c('#4363d8', '#008080', 'tomato'))+
+  scale_fill_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c("#CC6677", "#117733","#DDCC77"))+
   geom_jitter(position = position_jitter(width = 0.1, height = 0, seed=13), alpha=0.5)+
   theme_bw()+
   expand_limits(x = 0, y = 0)+
@@ -796,7 +818,7 @@ label <- c("Control","Water\nwithholding","Nutrient\naddition")
 # plot
 ph<-ggplot(map.pat, aes(x=factor(Treatment, level=level_order), y=pH, fill=Treatment)) +
   geom_boxplot()+
-  scale_fill_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c('#4363d8', '#008080', 'tomato'))+
+  scale_fill_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c("#CC6677", "#117733","#DDCC77"))+
   geom_jitter(position = position_jitter(width = 0.1, height = 0, seed=13), alpha=0.5)+
   theme_bw()+
   expand_limits(x = 0, y = 0)+
@@ -859,7 +881,7 @@ label <- c("Control","Water\nwithholding","Nutrient\naddition")
 # plot
 p<-ggplot(map.pat, aes(x=factor(Treatment, level=level_order), y=P, fill=Treatment)) +
   geom_boxplot()+
-  scale_fill_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c('#4363d8', '#008080', 'tomato'))+
+  scale_fill_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c("#CC6677", "#117733","#DDCC77"))+
   geom_jitter(position = position_jitter(width = 0.1, height = 0, seed=13), alpha=0.5)+
   theme_bw()+
   expand_limits(x = 0, y = 0)+
@@ -922,7 +944,7 @@ label <- c("Control","Water\nwithholding","Nutrient\naddition")
 # plot
 k<-ggplot(map.pat, aes(x=factor(Treatment, level=level_order), y=K, fill=Treatment)) +
   geom_boxplot()+
-  scale_fill_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c('#4363d8', '#008080', 'tomato'))+
+  scale_fill_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c("#CC6677", "#117733","#DDCC77"))+
   geom_jitter(position = position_jitter(width = 0.1, height = 0, seed=13), alpha=0.5)+
   theme_bw()+
   expand_limits(x = 0, y = 0)+
@@ -966,7 +988,7 @@ label <- c("Control","Water\nwithholding","Nutrient\naddition")
 # plot
 ca<-ggplot(map.pat, aes(x=factor(Treatment, level=level_order), y=Ca, fill=Treatment)) +
   geom_boxplot()+
-  scale_fill_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c('#4363d8', '#008080', 'tomato'))+
+  scale_fill_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c("#CC6677", "#117733","#DDCC77"))+
   geom_jitter(position = position_jitter(width = 0.1, height = 0, seed=13), alpha=0.5)+
   theme_bw()+
   expand_limits(x = 0, y = 0)+
@@ -1010,7 +1032,7 @@ label <- c("Control","Water\nwithholding","Nutrient\naddition")
 # plot
 mg<-ggplot(map.pat, aes(x=factor(Treatment, level=level_order), y=Mg, fill=Treatment)) +
   geom_boxplot()+
-  scale_fill_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c('#4363d8', '#008080', 'tomato'))+
+  scale_fill_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c("#CC6677", "#117733","#DDCC77"))+
   geom_jitter(position = position_jitter(width = 0.1, height = 0, seed=13), alpha=0.5)+
   theme_bw()+
   expand_limits(x = 0, y = 0)+
@@ -1053,7 +1075,7 @@ label <- c("Control","Water\nwithholding","Nutrient\naddition")
 # plot
 om<-ggplot(map.pat, aes(x=factor(Treatment, level=level_order), y=OM, fill=Treatment)) +
   geom_boxplot()+
-  scale_fill_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c('#4363d8', '#008080', 'tomato'))+
+  scale_fill_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c("#CC6677", "#117733","#DDCC77"))+
   geom_jitter(position = position_jitter(width = 0.1, height = 0, seed=13), alpha=0.5)+
   theme_bw()+
   expand_limits(x = 0, y = 0)+
@@ -1112,7 +1134,7 @@ label <- c("Control","Water\nwithholding","Nutrient\naddition")
 # plot
 no3<-ggplot(map.pat, aes(x=factor(Treatment, level=level_order), y=NO3, fill=Treatment)) +
   geom_boxplot()+
-  scale_fill_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c('#4363d8', '#008080', 'tomato'))+
+  scale_fill_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c("#CC6677", "#117733","#DDCC77"))+
   geom_jitter(position = position_jitter(width = 0.1, height = 0, seed=13), alpha=0.5)+
   theme_bw()+
   expand_limits(x = 0, y = 0)+
@@ -1152,7 +1174,7 @@ label <- c("Control","Water\nwithholding","Nutrient\naddition")
 # plot
 nh4<-ggplot(map.pat, aes(x=factor(Treatment, level=level_order), y=NH4, fill=Treatment)) +
   geom_boxplot()+
-  scale_fill_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c('#4363d8', '#008080', 'tomato'))+
+  scale_fill_manual(labels = c("Control", "Water withholding", "Nutrient addition"),values=c("#CC6677", "#117733","#DDCC77"))+
   geom_jitter(position = position_jitter(width = 0.1, height = 0, seed=13), alpha=0.5)+
   theme_bw()+
   expand_limits(x = 0, y = 0)+
@@ -1177,28 +1199,36 @@ nh4
 # Figure 1. Plant Biomass
 biomass <- ggarrange(shoot, root, podmass, podnum,                                 
              ncol = 2, nrow = 2, align = "hv")
-ggsave("Plant biomass.tiff",
+ggsave("Fig.1 Plant biomass.tiff",
        biomass, device = "tiff",
        width = 8.3, height= 7, 
        units= "in", dpi = 600)
 
-# Figure 2. Make Bar plot for bacteria and fungi in the same panel
+# Figure 2. Soil Chemistry
+soilchem <- ggarrange(ph, p, k, ca, mg, om, no3, nh4,                                 
+             ncol = 4, nrow = 2, align = "hv")
+ggsave("Fig.2 Soil Chemistry.tiff",
+       soilchem, device = "tiff",
+       width = 16.5, height= 7.5, 
+       units= "in", dpi = 600)
+
+# Figure 3. Make Bar plot for bacteria and fungi in the same panel
 barplot <- ggarrange(barplot.genus,barplot.fg.genus, nrow=2,ncol = 1, align = "hv")
-ggsave("Fig.2 Bacteria and fungi_barplot.edit.eps",
+ggsave("Fig.3 Bacteria and fungi_barplot.edit.eps",
        barplot, device = "eps",
        width = 12, height = 11, 
        units= "in", dpi = 600)
 
-# Figure 3. Make PCoA plot for bacteria and fungi in the same panel
+# Figure 4. Make PCoA plot for bacteria and fungi in the same panel
 library(gridExtra)
 plot <- ggarrange(pat.pcoa, its.pcoa,common.legend=T, legend="bottom",nrow=1, ncol=2, align = "h")
 plot
-ggsave("Fig.3 Bacteria and fungi_PCoAplot.pat.tiff",
+ggsave("Fig.4 Bacteria and fungi_PCoAplot.pat.tiff",
        plot, device = "tiff",
        width = 6.5, height = 3.5, 
        units= "in", dpi = 600)
 
-# Figure 4. Alpha diversity
+# Figure. Alpha diversity
 alpha <- ggarrange(rich, rich.its, sha, sha.its,                                 
              ncol = 2, nrow = 2, align = "hv")
 ggsave("Alpha diversity.tiff",
@@ -1206,13 +1236,7 @@ ggsave("Alpha diversity.tiff",
        width = 8.3, height= 7, 
        units= "in", dpi = 600)
 
-# Figure 5. Soil Chemistry
-soilchem <- ggarrange(ph, p, k, ca, mg, om, no3, nh4,                                 
-             ncol = 4, nrow = 2, align = "hv")
-ggsave("Fig.2 Soil Chemistry.tiff",
-       soilchem, device = "tiff",
-       width = 16.5, height= 7.5, 
-       units= "in", dpi = 600)
+
 
 
 
