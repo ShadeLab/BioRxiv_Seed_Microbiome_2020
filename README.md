@@ -1,5 +1,5 @@
 ## Github Repository for
-# Abiotic treatment contributes to an alteration of the seed microbiome of common bean
+# Abiotic treatment to common bean plants results in an altered seed microbiome 
 ## by Ari Fina Bintarti,Patrick Kearns, Abby Sulesky, and Ashley Shade
 
 
