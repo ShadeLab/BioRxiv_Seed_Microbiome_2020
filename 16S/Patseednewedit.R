@@ -831,15 +831,15 @@ ph<-ggplot(map.pat, aes(x=factor(Treatment, level=level_order), y=pH, fill=Treat
        panel.background = element_blank(),
        panel.grid.major = element_blank(),
        panel.grid.minor = element_blank(),
-       plot.title = element_text(size = 15, face="bold"),
-       axis.text.y=element_text(size=14), 
+       plot.title = element_text(size = 20, face="bold"),
+       axis.text.y=element_text(size=19), 
        axis.text.x = element_blank(),
        axis.title.x = element_blank(),
        axis.ticks.x = element_blank(),
-       axis.title.y=element_text(size=14,face="bold"),
-       legend.text=element_text(size=14),
-       legend.title = element_text(size = 15),
-       legend.spacing.x = unit(0.05, 'cm'))
+       axis.title.y=element_text(size=19,face="bold"))
+       #legend.text=element_text(size=16),
+       #legend.title = element_text(size = 16),
+       #legend.spacing.x = unit(0.05, 'cm'))
 ph
 
 ### 2. P
@@ -894,15 +894,15 @@ p<-ggplot(map.pat, aes(x=factor(Treatment, level=level_order), y=P, fill=Treatme
        panel.background = element_blank(),
        panel.grid.major = element_blank(),
        panel.grid.minor = element_blank(),
-       plot.title = element_text(size = 15, face="bold"),
-       axis.text.y=element_text(size=14), 
+       plot.title = element_text(size = 20, face="bold"),
+       axis.text.y=element_text(size=19), 
        axis.text.x = element_blank(),
        axis.title.x = element_blank(),
        axis.ticks.x = element_blank(),
-       axis.title.y=element_text(size=14,face="bold"),
-       legend.text=element_text(size=14),
-       legend.title = element_text(size = 15),
-       legend.spacing.x = unit(0.05, 'cm'))
+       axis.title.y=element_text(size=19,face="bold"))
+       #legend.text=element_text(size=14),
+       #legend.title = element_text(size = 15),
+       #legend.spacing.x = unit(0.05, 'cm'))
 p
 
 ### 3. K
@@ -957,15 +957,15 @@ k<-ggplot(map.pat, aes(x=factor(Treatment, level=level_order), y=K, fill=Treatme
        panel.background = element_blank(),
        panel.grid.major = element_blank(),
        panel.grid.minor = element_blank(),
-       plot.title = element_text(size = 15, face="bold"),
-       axis.text.y=element_text(size=14), 
+       plot.title = element_text(size = 20, face="bold"),
+       axis.text.y=element_text(size=19), 
        axis.text.x = element_blank(),
        axis.title.x = element_blank(),
        axis.ticks.x = element_blank(),
-       axis.title.y=element_text(size=14,face="bold"),
-       legend.text=element_text(size=14),
-       legend.title = element_text(size = 15),
-       legend.spacing.x = unit(0.05, 'cm'))
+       axis.title.y=element_text(size=19,face="bold"))
+       #legend.text=element_text(size=14),
+       #legend.title = element_text(size = 15),
+       #legend.spacing.x = unit(0.05, 'cm'))
 k
 
 ### 4 Calcium (Ca)
@@ -1001,15 +1001,15 @@ ca<-ggplot(map.pat, aes(x=factor(Treatment, level=level_order), y=Ca, fill=Treat
        panel.background = element_blank(),
        panel.grid.major = element_blank(),
        panel.grid.minor = element_blank(),
-       plot.title = element_text(size = 15, face="bold"),
-       axis.text.y=element_text(size=14), 
+       plot.title = element_text(size = 20, face="bold"),
+       axis.text.y=element_text(size=19), 
        axis.text.x = element_blank(),
        axis.title.x = element_blank(),
        axis.ticks.x = element_blank(),
-       axis.title.y=element_text(size=14,face="bold"),
-       legend.text=element_text(size=14),
-       legend.title = element_text(size = 15),
-       legend.spacing.x = unit(0.05, 'cm'))
+       axis.title.y=element_text(size=19,face="bold"))
+       #legend.text=element_text(size=14),
+       #legend.title = element_text(size = 15),
+       #legend.spacing.x = unit(0.05, 'cm'))
 ca
 
 ### 5. Mg
@@ -1044,14 +1044,15 @@ mg<-ggplot(map.pat, aes(x=factor(Treatment, level=level_order), y=Mg, fill=Treat
        panel.background = element_blank(),
        panel.grid.major = element_blank(),
        panel.grid.minor = element_blank(),
-       plot.title = element_text(size = 15, face="bold"),
-       axis.text.y=element_text(size=14), 
-       axis.text.x = element_text(size=14),
+       plot.title = element_text(size = 20, face="bold"),
+       axis.text.y=element_text(size=19), 
+       axis.text.x = element_blank(),
+       axis.ticks.x = element_blank(),
        axis.title.x = element_blank(),
-       axis.title.y=element_text(size=14,face="bold"),
-       legend.text=element_text(size=14),
-       legend.title = element_text(size = 15),
-       legend.spacing.x = unit(0.05, 'cm'))
+       axis.title.y=element_text(size=19,face="bold"))
+       #legend.text=element_text(size=14),
+       #legend.title = element_text(size = 15),
+       #legend.spacing.x = unit(0.05, 'cm'))
 mg
 
 ### 6. OM
@@ -1087,13 +1088,15 @@ om<-ggplot(map.pat, aes(x=factor(Treatment, level=level_order), y=OM, fill=Treat
        panel.background = element_blank(),
        panel.grid.major = element_blank(),
        panel.grid.minor = element_blank(),
-       plot.title = element_text(size = 15, face="bold"),
-       axis.text=element_text(size=14), 
+       plot.title = element_text(size = 20, face="bold"),
+       axis.text.y=element_text(size=19), 
+       axis.text.x = element_blank(),
+       axis.ticks.x = element_blank(),
        axis.title.x = element_blank(),
-       axis.title.y=element_text(size=14,face="bold"),
-       legend.text=element_text(size=14),
-       legend.title = element_text(size = 15),
-       legend.spacing.x = unit(0.05, 'cm'))
+       axis.title.y=element_text(size=19,face="bold"))
+       #legend.text=element_text(size=14),
+       #legend.title = element_text(size = 15),
+       #legend.spacing.x = unit(0.05, 'cm'))
 om
 
 ### 7. NO3
@@ -1147,13 +1150,13 @@ no3<-ggplot(map.pat, aes(x=factor(Treatment, level=level_order), y=NO3, fill=Tre
        panel.background = element_blank(),
        panel.grid.major = element_blank(),
        panel.grid.minor = element_blank(),
-       plot.title = element_text(size = 15, face="bold"),
-       axis.text=element_text(size=14), 
+       plot.title = element_text(size = 20, face="bold"),
+       axis.text=element_text(size=19), 
        axis.title.x = element_blank(),
-       axis.title.y=element_text(size=14,face="bold"),
-       legend.text=element_text(size=14),
-       legend.title = element_text(size = 15),
-       legend.spacing.x = unit(0.05, 'cm'))
+       axis.title.y=element_text(size=19,face="bold"))
+       #legend.text=element_text(size=14),
+       #legend.title = element_text(size = 15),
+       #legend.spacing.x = unit(0.05, 'cm'))
 no3
 
 ### 7. NH4
@@ -1185,13 +1188,13 @@ nh4<-ggplot(map.pat, aes(x=factor(Treatment, level=level_order), y=NH4, fill=Tre
        panel.background = element_blank(),
        panel.grid.major = element_blank(),
        panel.grid.minor = element_blank(),
-       plot.title = element_text(size = 15, face="bold"),
-       axis.text=element_text(size=14), 
+       plot.title = element_text(size = 20, face="bold"),
+       axis.text=element_text(size=19), 
        axis.title.x = element_blank(),
-       axis.title.y=element_text(size=14,face="bold"),
-       legend.text=element_text(size=14),
-       legend.title = element_text(size = 15),
-       legend.spacing.x = unit(0.05, 'cm'))
+       axis.title.y=element_text(size=19,face="bold"))
+       #legend.text=element_text(size=14),
+       #legend.title = element_text(size = 15),
+       #legend.spacing.x = unit(0.05, 'cm'))
 nh4
 
 ### FIGURE
@@ -1206,10 +1209,10 @@ ggsave("Fig.1 Plant biomass.tiff",
 
 # Figure 2. Soil Chemistry
 soilchem <- ggarrange(ph, p, k, ca, mg, om, no3, nh4,                                 
-             ncol = 4, nrow = 2, align = "hv")
+             ncol = 2, nrow = 4, align = "hv")
 ggsave("Fig.2 Soil Chemistry.tiff",
        soilchem, device = "tiff",
-       width = 16.5, height= 7.5, 
+       width = 12, height= 19, 
        units= "in", dpi = 600)
 
 # Figure 3. Make Bar plot for bacteria and fungi in the same panel
