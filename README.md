@@ -11,7 +11,7 @@ The raw data for this study are available in the NCBI SRA under bioproject [PRJN
 
 
 ### To cite this work or code
-Bintarti, AF, P Kearns, A Sulesky and A Shade.  2020.  Abiotic treatment to common bean plants results in an altered seed microbiome.  bioRXiv.  https://doi.org/10.1101/2020.06.05.134445 
+Bintarti, AF, P Kearns, A Sulesky and A Shade.  2020.  Abiotic treatment to common bean plants results in an altered seed microbiome.  bioRXiv.  https://doi.org/10.1101/2020.06.05.134445v2 
 
 
 ### Abstract
