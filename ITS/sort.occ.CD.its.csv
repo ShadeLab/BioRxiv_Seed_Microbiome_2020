@@ -1,0 +1,227 @@
+OTU_ID,Occ.CD.its,Kingdom,Phylum,Class,Order,Family,Genus,Species
+OTU_24,1,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,Aspergillus,Aspergillus niger
+OTU_248,1,Fungi,,,,,,
+OTU_26,1,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,Aspergillus,Aspergillus niger
+OTU_27,1,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,Aspergillus,
+OTU_151,0.933333333,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,Penicillium,Penicillium astrolabium
+OTU_152,0.933333333,Fungi,Basidiomycota,Wallemiomycetes,Wallemiales,Wallemiaceae,Wallemia,
+OTU_19,0.933333333,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,Aspergillus,Aspergillus niger
+OTU_229,0.933333333,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,Aspergillus,
+OTU_141,0.866666667,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,Aspergillus,Aspergillus caesiellus
+OTU_277,0.866666667,Fungi,Ascomycota,Sordariomycetes,Hypocreales,Nectriaceae,,
+OTU_244,0.8,Fungi,Ascomycota,Sordariomycetes,Hypocreales,,,
+OTU_30,0.8,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,Aspergillus,Aspergillus piperis
+OTU_184,0.733333333,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,Aspergillus,
+OTU_20,0.733333333,Fungi,Ascomycota,Dothideomycetes,Pleosporales,,,
+OTU_216,0.733333333,Fungi,Ascomycota,Sordariomycetes,Hypocreales,Nectriaceae,,
+OTU_117,0.666666667,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,Penicillium,Penicillium citrinum
+OTU_119,0.666666667,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,Aspergillus,Aspergillus penicillioides
+OTU_143,0.666666667,Fungi,Basidiomycota,Tremellomycetes,Cystofilobasidiales,Cystofilobasidiaceae,Guehomyces,Guehomyces pullulans
+OTU_170,0.666666667,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,,
+OTU_22,0.666666667,Fungi,Ascomycota,Dothideomycetes,Pleosporales,Pleosporaceae,Alternaria,Alternaria sp 
+OTU_124,0.6,Fungi,Ascomycota,Sordariomycetes,Hypocreales,Nectriaceae,,
+OTU_157,0.6,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,Aspergillus,Aspergillus sydowii
+OTU_160,0.6,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,Penicillium,Penicillium steckii
+OTU_175,0.6,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,,
+OTU_52,0.533333333,Fungi,,,,,,
+OTU_71,0.533333333,Fungi,Ascomycota,Dothideomycetes,,,,
+OTU_171,0.466666667,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,,
+OTU_32,0.466666667,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,Aspergillus,
+OTU_33,0.466666667,Fungi,Basidiomycota,Agaricomycetes,Agaricales,Lyophyllaceae,Fibulochlamys,Fibulochlamys chilensis
+OTU_153,0.4,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,Penicillium,
+OTU_154,0.4,Fungi,Ascomycota,,,,,
+OTU_28,0.4,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,Aspergillus,Aspergillus penicillioides
+OTU_56,0.4,Fungi,,,,,,
+OTU_65,0.4,Fungi,Ascomycota,Sordariomycetes,Hypocreales,Nectriaceae,Gibberella,Gibberella fujikuroi
+OTU_79,0.4,Fungi,,,,,,
+OTU_108,0.333333333,Fungi,Basidiomycota,Agaricomycetes,Agaricales,Bolbitiaceae,Conocybe,Conocybe deliquescens
+OTU_113,0.333333333,Fungi,Ascomycota,Sordariomycetes,Hypocreales,Nectriaceae,Fusarium,
+OTU_176,0.333333333,Fungi,Ascomycota,Sordariomycetes,Sordariales,,,
+OTU_177,0.333333333,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,Aspergillus,Aspergillus pseudodeflectus
+OTU_183,0.333333333,Fungi,Basidiomycota,Agaricomycetes,Agaricales,Lyophyllaceae,Fibulochlamys,Fibulochlamys chilensis
+OTU_80,0.333333333,Fungi,Basidiomycota,Agaricomycetes,Cantharellales,Incertae_sedis,Sistotrema,Sistotrema sp 
+OTU_9,0.333333333,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,Aspergillus,
+OTU_148,0.266666667,Fungi,Mortierellomycota,Mortierellomycetes,Mortierellales,Mortierellaceae,Mortierella,Mortierella camargensis
+OTU_169,0.266666667,Fungi,Mortierellomycota,Mortierellomycetes,Mortierellales,Mortierellaceae,Mortierella,
+OTU_200,0.266666667,Fungi,Ascomycota,Sordariomycetes,Glomerellales,Plectosphaerellaceae,Verticillium,Verticillium dahliae
+OTU_218,0.266666667,Fungi,Ascomycota,Pezizomycetes,Pezizales,Pezizaceae,Peziza,Peziza ostracoderma
+OTU_234,0.266666667,Fungi,Basidiomycota,Tremellomycetes,Tremellales,,,
+OTU_25,0.266666667,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,Aspergillus,Aspergillus niger
+OTU_59,0.266666667,Fungi,Mortierellomycota,Mortierellomycetes,Mortierellales,Mortierellaceae,Mortierella,Mortierella sp 
+OTU_12,0.2,Fungi,Ascomycota,Sordariomycetes,Hypocreales,,,
+OTU_134,0.2,Fungi,Ascomycota,Sordariomycetes,Hypocreales,Nectriaceae,Fusarium,Fusarium sp 
+OTU_135,0.2,Fungi,Ascomycota,Sordariomycetes,Sordariales,Chaetomiaceae,Chaetomium,Chaetomium grande
+OTU_166,0.2,Fungi,,,,,,
+OTU_167,0.2,Fungi,,,,,,
+OTU_182,0.2,Fungi,,,,,,
+OTU_188,0.2,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Trichocomaceae,,
+OTU_191,0.2,Fungi,,,,,,
+OTU_193,0.2,Fungi,Basidiomycota,Tremellomycetes,Filobasidiales,Filobasidiaceae,Filobasidium,
+OTU_197,0.2,Fungi,Olpidiomycota,Olpidiomycetes,Olpidiales,Olpidiaceae,Olpidium,Olpidium brassicae
+OTU_202,0.2,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,Penicillium,
+OTU_214,0.2,Fungi,,,,,,
+OTU_223,0.2,Fungi,Rozellomycota,Incertae_sedis,Gs11,,,
+OTU_225,0.2,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,Penicillium,Penicillium citrinum
+OTU_232,0.2,Fungi,Ascomycota,Saccharomycetes,Saccharomycetales,Debaryomycetaceae,Meyerozyma,Meyerozyma guilliermondii
+OTU_46,0.2,Fungi,Chytridiomycota,Chytridiomycetes,,,,
+OTU_50,0.2,Fungi,,,,,,
+OTU_66,0.2,Fungi,Basidiomycota,Agaricomycetes,Agaricales,Nidulariaceae,Cyathus,Cyathus stercoreus
+OTU_8,0.2,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,Penicillium,Penicillium sp 
+OTU_91,0.2,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,Aspergillus,Aspergillus niger
+OTU_110,0.133333333,Fungi,Ascomycota,Sordariomycetes,Sordariales,Chaetomiaceae,Humicola,Humicola nigrescens
+OTU_136,0.133333333,Fungi,Ascomycota,Sordariomycetes,Sordariales,Chaetomiaceae,Zopfiella,Zopfiella marina
+OTU_147,0.133333333,Fungi,Ascomycota,Dothideomycetes,Pleosporales,,,
+OTU_155,0.133333333,Fungi,,,,,,
+OTU_168,0.133333333,Fungi,Chytridiomycota,Spizellomycetes,Spizellomycetales,Spizellomycetaceae,Spizellomyces,Spizellomyces plurigibbosus
+OTU_174,0.133333333,Fungi,Olpidiomycota,Olpidiomycetes,Olpidiales,Olpidiaceae,Olpidium,Olpidium brassicae
+OTU_180,0.133333333,Fungi,,,,,,
+OTU_196,0.133333333,Fungi,Ascomycota,Sordariomycetes,Sordariales,Chaetomiaceae,Trichocladium,Trichocladium pyriforme
+OTU_206,0.133333333,Fungi,,,,,,
+OTU_208,0.133333333,Fungi,Basidiomycota,Agaricomycetes,Agaricales,Psathyrellaceae,Parasola,
+OTU_212,0.133333333,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,,
+OTU_215,0.133333333,Fungi,,,,,,
+OTU_220,0.133333333,Fungi,Ascomycota,Sordariomycetes,Sordariales,Chaetomiaceae,,
+OTU_227,0.133333333,Fungi,Ascomycota,Sordariomycetes,Microascales,,,
+OTU_242,0.133333333,Fungi,Basidiomycota,Agaricomycetes,Auriculariales,,,
+OTU_249,0.133333333,Fungi,Basidiomycota,Agaricomycetes,Polyporales,Ischnodermataceae,Ischnoderma,Ischnoderma resinosum
+OTU_251,0.133333333,Fungi,Mortierellomycota,Mortierellomycetes,Mortierellales,Mortierellaceae,,
+OTU_267,0.133333333,Fungi,Ascomycota,Sordariomycetes,Hypocreales,Nectriaceae,Fusarium,Fusarium solani
+OTU_278,0.133333333,Fungi,Mortierellomycota,Mortierellomycetes,Mortierellales,Mortierellaceae,Mortierella,Mortierella globulifera
+OTU_279,0.133333333,Fungi,Basidiomycota,Agaricomycetes,Agaricales,Lyophyllaceae,Fibulochlamys,Fibulochlamys chilensis
+OTU_282,0.133333333,Fungi,Ascomycota,Leotiomycetes,Helotiales,Myxotrichaceae,Oidiodendron,Oidiodendron truncatum
+OTU_34,0.133333333,Fungi,Ascomycota,Eurotiomycetes,Chaetothyriales,,,
+OTU_72,0.133333333,Fungi,,,,,,
+OTU_84,0.133333333,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Trichocomaceae,Talaromyces,Talaromyces sp 
+OTU_87,0.133333333,Fungi,Ascomycota,Sordariomycetes,Sordariales,Lasiosphaeriaceae,Apodus,Apodus deciduus
+OTU_100,0.066666667,Fungi,Ascomycota,Pezizomycetes,Pezizales,Pezizaceae,Peziza,Peziza ostracoderma
+OTU_103,0.066666667,Fungi,Ascomycota,Leotiomycetes,Thelebolales,Pseudeurotiaceae,Pleuroascus,Pleuroascus nicholsonii
+OTU_105,0.066666667,Fungi,Basidiomycota,Agaricomycetes,Agaricales,Schizophyllaceae,Schizophyllum,Schizophyllum commune
+OTU_106,0.066666667,Fungi,Ascomycota,Leotiomycetes,Helotiales,Myxotrichaceae,Oidiodendron,Oidiodendron truncatum
+OTU_107,0.066666667,Fungi,Ascomycota,Sordariomycetes,Hypocreales,Hypocreaceae,Trichoderma,Trichoderma sp 
+OTU_11,0.066666667,Fungi,Ascomycota,Sordariomycetes,Microascales,,,
+OTU_112,0.066666667,Fungi,Ascomycota,Sordariomycetes,Hypocreales,Nectriaceae,Fusarium,
+OTU_115,0.066666667,Fungi,Ascomycota,Sordariomycetes,Hypocreales,Incertae_sedis,Acremonium,Acremonium persicinum
+OTU_121,0.066666667,Fungi,Basidiomycota,Tremellomycetes,Cystofilobasidiales,Mrakiaceae,Itersonilia,Itersonilia perplexans
+OTU_126,0.066666667,Fungi,Ascomycota,Sordariomycetes,Hypocreales,Nectriaceae,,
+OTU_129,0.066666667,Fungi,Ascomycota,Pezizomycetes,Pezizales,Pyronemataceae,,
+OTU_130,0.066666667,Fungi,Basidiomycota,Agaricomycetes,Agaricales,,,
+OTU_132,0.066666667,Fungi,Basidiomycota,Agaricomycetes,Cantharellales,Ceratobasidiaceae,,
+OTU_150,0.066666667,Fungi,Ascomycota,,,,,
+OTU_156,0.066666667,Fungi,Ascomycota,,,,,
+OTU_158,0.066666667,Fungi,Ascomycota,Pezizomycetes,,,,
+OTU_159,0.066666667,Fungi,,,,,,
+OTU_162,0.066666667,Fungi,,,,,,
+OTU_163,0.066666667,Fungi,,,,,,
+OTU_165,0.066666667,Fungi,Glomeromycota,,,,,
+OTU_172,0.066666667,Fungi,,,,,,
+OTU_173,0.066666667,Fungi,Ascomycota,Dothideomycetes,Pleosporales,Cucurbitariaceae,Pyrenochaeta,
+OTU_178,0.066666667,Fungi,,,,,,
+OTU_18,0.066666667,Fungi,Ascomycota,Sordariomycetes,Hypocreales,Bionectriaceae,Clonostachys,Clonostachys rosea
+OTU_189,0.066666667,Fungi,Glomeromycota,Glomeromycetes,Glomerales,Claroideoglomeraceae,Claroideoglomus,Claroideoglomus luteum
+OTU_192,0.066666667,Fungi,Glomeromycota,Glomeromycetes,Glomerales,Claroideoglomeraceae,Claroideoglomus,Claroideoglomus claroideum
+OTU_194,0.066666667,Fungi,,,,,,
+OTU_195,0.066666667,Fungi,,,,,,
+OTU_198,0.066666667,Fungi,Glomeromycota,Glomeromycetes,Glomerales,Claroideoglomeraceae,Claroideoglomus,Claroideoglomus luteum
+OTU_199,0.066666667,Fungi,Glomeromycota,Glomeromycetes,Glomerales,Glomeraceae,,
+OTU_201,0.066666667,Fungi,Ascomycota,Sordariomycetes,Sordariales,,,
+OTU_203,0.066666667,Fungi,Ascomycota,Sordariomycetes,Sordariales,Chaetomiaceae,,
+OTU_205,0.066666667,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,,
+OTU_207,0.066666667,Fungi,Glomeromycota,Glomeromycetes,Glomerales,Glomeraceae,,
+OTU_209,0.066666667,Fungi,,,,,,
+OTU_211,0.066666667,Fungi,Ascomycota,Sordariomycetes,Sordariales,Chaetomiaceae,,
+OTU_213,0.066666667,Fungi,Basidiomycota,Microbotryomycetes,Incertae_sedis,Chrysozymaceae,Udeniozyma,Udeniozyma ferulica
+OTU_217,0.066666667,Fungi,Basidiomycota,Agaricomycetes,Cantharellales,Ceratobasidiaceae,,
+OTU_219,0.066666667,Fungi,Glomeromycota,Glomeromycetes,Glomerales,Glomeraceae,,
+OTU_221,0.066666667,Fungi,Basidiomycota,Agaricomycetes,Tremellodendropsidales,,,
+OTU_224,0.066666667,Fungi,Ascomycota,Orbiliomycetes,Orbiliales,Orbiliaceae,,
+OTU_235,0.066666667,Fungi,Chytridiomycota,,,,,
+OTU_237,0.066666667,Fungi,,,,,,
+OTU_243,0.066666667,Fungi,Glomeromycota,Paraglomeromycetes,Paraglomerales,,,
+OTU_245,0.066666667,Fungi,Glomeromycota,Glomeromycetes,Glomerales,Glomeraceae,,
+OTU_247,0.066666667,Fungi,Glomeromycota,Glomeromycetes,Glomerales,Glomeraceae,,
+OTU_250,0.066666667,Fungi,Glomeromycota,Glomeromycetes,Glomerales,Glomeraceae,Funneliformis,
+OTU_252,0.066666667,Fungi,Mortierellomycota,Mortierellomycetes,Mortierellales,Mortierellaceae,Mortierella,Mortierella polygonia
+OTU_256,0.066666667,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,,
+OTU_259,0.066666667,Fungi,Basidiomycota,Agaricomycetes,Agaricales,Marasmiaceae,Marasmius,Marasmius rotalis
+OTU_262,0.066666667,Fungi,Ascomycota,Dothideomycetes,Pleosporales,Pleosporaceae,Alternaria,Alternaria breviramosa
+OTU_263,0.066666667,Fungi,Glomeromycota,Glomeromycetes,Glomerales,Glomeraceae,,
+OTU_265,0.066666667,Fungi,,,,,,
+OTU_270,0.066666667,Fungi,Ascomycota,Sordariomycetes,Sordariales,Lasiosphaeriaceae,Cercophora,Cercophora sp 
+OTU_271,0.066666667,Fungi,Ascomycota,Sordariomycetes,Sordariales,Lasiosphaeriaceae,Podospora,Podospora pyriformis
+OTU_274,0.066666667,Fungi,Glomeromycota,Glomeromycetes,Glomerales,Glomeraceae,,
+OTU_280,0.066666667,Fungi,,,,,,
+OTU_284,0.066666667,Fungi,Ascomycota,,,,,
+OTU_285,0.066666667,Fungi,Glomeromycota,Glomeromycetes,Glomerales,Glomeraceae,,
+OTU_287,0.066666667,Fungi,,,,,,
+OTU_289,0.066666667,Fungi,,,,,,
+OTU_29,0.066666667,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,Aspergillus,Aspergillus niger
+OTU_291,0.066666667,Fungi,Ascomycota,Sordariomycetes,,,,
+OTU_295,0.066666667,Fungi,Glomeromycota,Glomeromycetes,Glomerales,Glomeraceae,Rhizophagus,Rhizophagus irregularis
+OTU_298,0.066666667,Fungi,,,,,,
+OTU_299,0.066666667,Fungi,Ascomycota,Dothideomycetes,,,,
+OTU_49,0.066666667,Fungi,,,,,,
+OTU_51,0.066666667,Fungi,Basidiomycota,Agaricomycetes,Polyporales,Meruliaceae,Uncobasidium,Uncobasidium sp 
+OTU_55,0.066666667,Fungi,Ascomycota,Dothideomycetes,Pleosporales,,,
+OTU_6,0.066666667,Fungi,Ascomycota,Sordariomycetes,Sordariales,Lasiosphaeriaceae,,
+OTU_60,0.066666667,Fungi,Mortierellomycota,Mortierellomycetes,Mortierellales,Mortierellaceae,Mortierella,Mortierella sp 
+OTU_69,0.066666667,Fungi,Ascomycota,,,,,
+OTU_75,0.066666667,Fungi,,,,,,
+OTU_78,0.066666667,Fungi,Ascomycota,Dothideomycetes,Pleosporales,Pleosporaceae,Drechslera,Drechslera sp 
+OTU_99,0.066666667,Fungi,Mortierellomycota,Mortierellomycetes,Mortierellales,Mortierellaceae,Mortierella,Mortierella sp 
+OTU_1,0,Fungi,Ascomycota,Leotiomycetes,Helotiales,Sclerotiniaceae,Botrytis,Botrytis caroliniana
+OTU_109,0,Fungi,Ascomycota,Dothideomycetes,Pleosporales,,,
+OTU_120,0,Fungi,Ascomycota,,,,,
+OTU_127,0,Fungi,Ascomycota,Eurotiomycetes,Chaetothyriales,Herpotrichiellaceae,Exophiala,Exophiala equina
+OTU_128,0,Fungi,Ascomycota,Sordariomycetes,Hypocreales,Hypocreaceae,Trichoderma,Trichoderma spirale
+OTU_13,0,Fungi,Ascomycota,Sordariomycetes,Chaetosphaeriales,Chaetosphaeriaceae,Chaetosphaeria,Chaetosphaeria vermicularioides
+OTU_138,0,Fungi,Ascomycota,Leotiomycetes,Helotiales,,,
+OTU_142,0,Fungi,Basidiomycota,Tremellomycetes,Filobasidiales,Piskurozymaceae,Solicoccozyma,Solicoccozyma terrea
+OTU_144,0,Fungi,Ascomycota,,,,,
+OTU_145,0,Fungi,Ascomycota,Saccharomycetes,Saccharomycetales,Phaffomycetaceae,Cyberlindnera,Cyberlindnera jadinii
+OTU_161,0,Fungi,,,,,,
+OTU_164,0,Fungi,,,,,,
+OTU_179,0,Fungi,,,,,,
+OTU_181,0,Fungi,,,,,,
+OTU_185,0,Fungi,Glomeromycota,Glomeromycetes,Glomerales,Claroideoglomeraceae,Claroideoglomus,
+OTU_186,0,Fungi,Ascomycota,Dothideomycetes,Pleosporales,,,
+OTU_187,0,Fungi,,,,,,
+OTU_190,0,Fungi,Ascomycota,Sordariomycetes,Hypocreales,Hypocreaceae,Trichoderma,
+OTU_204,0,Fungi,,,,,,
+OTU_222,0,Fungi,,,,,,
+OTU_228,0,Fungi,Mortierellomycota,Mortierellomycetes,Mortierellales,Mortierellaceae,Mortierella,Mortierella alpina
+OTU_230,0,Fungi,,,,,,
+OTU_231,0,Fungi,Kickxellomycota,Kickxellomycetes,Kickxellales,Kickxellaceae,Ramicandelaber,Ramicandelaber taiwanensis
+OTU_233,0,Fungi,,,,,,
+OTU_236,0,Fungi,Basidiomycota,Tremellomycetes,Filobasidiales,Filobasidiaceae,Naganishia,Naganishia diffluens
+OTU_238,0,Fungi,Ascomycota,Sordariomycetes,Hypocreales,Hypocreaceae,Trichoderma,
+OTU_239,0,Fungi,,,,,,
+OTU_240,0,Fungi,Ascomycota,Leotiomycetes,Thelebolales,Pseudeurotiaceae,,
+OTU_241,0,Fungi,Ascomycota,Leotiomycetes,Helotiales,Sclerotiniaceae,,
+OTU_246,0,Fungi,Basidiomycota,Tremellomycetes,,,,
+OTU_254,0,Fungi,Ascomycota,Sordariomycetes,Microascales,Halosphaeriaceae,,
+OTU_257,0,Fungi,Glomeromycota,Glomeromycetes,Glomerales,Glomeraceae,,
+OTU_258,0,Fungi,Mortierellomycota,Mortierellomycetes,Mortierellales,Mortierellaceae,Mortierella,Mortierella sp 
+OTU_260,0,Fungi,Chytridiomycota,,,,,
+OTU_261,0,Fungi,Ascomycota,Dothideomycetes,Pleosporales,,,
+OTU_264,0,Fungi,Ascomycota,Sordariomycetes,Hypocreales,Incertae_sedis,Emericellopsis,Emericellopsis humicola
+OTU_269,0,Fungi,Ascomycota,Saccharomycetes,Saccharomycetales,Phaffomycetaceae,Cyberlindnera,Cyberlindnera jadinii
+OTU_275,0,Fungi,Glomeromycota,Glomeromycetes,Glomerales,Claroideoglomeraceae,Claroideoglomus,
+OTU_276,0,Fungi,Glomeromycota,Paraglomeromycetes,,,,
+OTU_281,0,Fungi,Ascomycota,Eurotiomycetes,Chaetothyriales,Herpotrichiellaceae,Exophiala,
+OTU_290,0,Fungi,,,,,,
+OTU_292,0,Fungi,Glomeromycota,Glomeromycetes,Glomerales,Claroideoglomeraceae,,
+OTU_296,0,Fungi,,,,,,
+OTU_297,0,Fungi,Basidiomycota,Agaricomycetes,Auriculariales,,,
+OTU_301,0,Fungi,Basidiomycota,Agaricomycetes,Agaricales,Psathyrellaceae,Coprinellus,
+OTU_36,0,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,Aspergillus,
+OTU_38,0,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,Penicillium,Penicillium singorense
+OTU_45,0,Fungi,Chytridiomycota,Spizellomycetes,Spizellomycetales,Spizellomycetaceae,Spizellomyces,Spizellomyces pseudodichotomus
+OTU_48,0,Fungi,Chytridiomycota,,,,,
+OTU_5,0,Fungi,,,,,,
+OTU_58,0,Fungi,Ascomycota,Pezizomycetes,Pezizales,Pyronemataceae,,
+OTU_74,0,Fungi,Chytridiomycota,,,,,
+OTU_82,0,Fungi,Ascomycota,Leotiomycetes,Helotiales,Helotiaceae,Glarea,Glarea lozoyensis
+OTU_85,0,Fungi,Basidiomycota,Agaricomycetes,Hymenochaetales,Hymenochaetaceae,Hymenochaete,Hymenochaete innexa
+OTU_88,0,Fungi,Mortierellomycota,Mortierellomycetes,Mortierellales,Mortierellaceae,Mortierella,Mortierella amoeboidea
+OTU_92,0,Fungi,Ascomycota,Eurotiomycetes,Eurotiales,Aspergillaceae,Aspergillus,
+OTU_98,0,Fungi,Chytridiomycota,Spizellomycetes,Spizellomycetales,Spizellomycetaceae,Spizellomyces,Spizellomyces punctatus

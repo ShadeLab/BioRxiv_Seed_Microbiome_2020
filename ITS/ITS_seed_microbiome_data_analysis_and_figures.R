@@ -201,6 +201,12 @@ phyl.its
 fg.genus <- tax_glom(phyl.its, taxrank = "Genus", NArm = F)
 fg.ra <- transform_sample_counts(fg.genus, function(x) x/sum(x))
 fg.ra
+
+###create dataframe from phyloseq object
+df.its.genus <- data.table(psmelt(fg.ra))
+dim(df.its.genus)
+write.csv(df.its.genus, file = "df.its.genus.csv")
+
 #fg.ra
 #fg.cum.abun=taxa_sums(fg.ra)
 #fg.cum.abun # abundance per OTU
@@ -224,6 +230,7 @@ df.fg <- psmelt(fg.ra) %>%
   group_by(Sample, Treatment, Genus) %>%
   summarize(Mean = mean(Abundance)) %>%
   arrange(-Mean)
+
 df.fg$Genus <- as.character(df.fg$Genus)
 df.fg$Genus[df.fg$Mean < 0.1] <- "Other (mean relative abundance < 10%)"
 df.fg$Treatment = factor(df.fg$Treatment, levels=c('Control','Water withholding','Nutrient addition'))
@@ -353,14 +360,135 @@ groups.its <- factor(c(rep("Control",8),rep("Water withholding",7), rep("Nutrien
 otu_its.dist <- vegdist(t(otu.its.pa), method='jaccard',binary = T)
 mod.its<- betadisper(otu_its.dist, groups.its)
 mod.its
-# Null hypothesis of no difference in dispersion between groups
-anova(mod.its) # there is no significant differences in dispersion between groups
 # the variances among groups are homogenous,
+# Null hypothesis of no difference in dispersion between groups
+set.seed(3)
+#permutation-based test for multivariate homogeneity of group dispersion (variances)
+permod.its <- permutest(mod.its, permutations = 999, pairwise = T)
+permod.its # there is no significant differences in dispersion between groups
+# the variances among groups are homogenous,
+hsd.its=TukeyHSD(mod.its) #which groups differ in relation to their variances
+hsd.its
+plot(hsd.its)
 
 
 
+#####################################################################################################################################
+# Distribution of Chloroplast and mitochondria per sample
+
+
+#read the unfiltered otu table 
+otu.unfil.its <- read.table('04022020_pat.OpenRef_OTU_table.txt', sep='\t', header=T, row.names = 1)
+otu.unfil.its
+sort(rowSums(otu.unfil.its, na.rm = FALSE, dims = 1), decreasing = F)
+
+#read taxonomy
+taxonomy.unfil.its = read.csv("consensus_taxonomy.csv", header=T)
 
 
 
+#read the metadata
+map.pat
+
+# merge the taxonomy with otu table
+head(taxonomy.unfil.its)
+taxonomy.unfil.its <- rownames_to_column(taxonomy.unfil.its, var = "OTU_ID")
+head(otu.unfil.its)
+otu.unfil.its <- rownames_to_column(otu.unfil.its, var = "OTU_ID")
+otu.unfil.its.tax <- merge(otu.unfil.its, taxonomy.unfil.its, by="OTU_ID")
+dim(otu.unfil.its.tax)
+
+#select only the otu table and "Order"  & "Family"
+colnames(otu.unfil.its.tax)
+otu.unfil.its.tax.ed <- otu.unfil.its.tax[,c(1:25)]
+colnames(otu.unfil.its.tax.ed)
+
+#edit the taxonomy
+otu.unfil.its.tax.ed1 <- otu.unfil.its.tax.ed %>%
+    mutate(Domain = case_when(Phylum == "Cercozoa" ~ 'Cercozoa',
+                                  TRUE ~ 'Fungi'))
+
+tail(otu.unfil.its.tax.ed1)
+colnames(otu.unfil.its.tax.ed1)
+otu.unfil.its.tax.ed2 <- otu.unfil.its.tax.ed1[,c(1:24)]
+colnames(otu.unfil.its.tax.ed2)
+tail(otu.unfil.its.tax.ed2)
+
+long.dat.its <- gather(otu.unfil.its.tax.ed2, Sample, Read, C1:N7, factor_key = T)
+long.dat.its
+
+
+df.unfil.its <- long.dat.its %>%
+  group_by(Sample, Domain) %>%
+  summarize(read.number = sum(Read))
+df.unfil1.its <- df.unfil.its %>% 
+  group_by(Sample) %>% 
+  mutate(percent= prop.table(read.number) * 100)
+
+with(df.unfil1.its, sum(percent[Domain ==  "Fungi"]))
+
+library(ggbeeswarm)
+library(ggplot2)
+library(ggtext)
+plot.unfil.king.its <- ggplot(df.unfil1.its, aes(x=Domain, y=percent, fill=Domain))+
+                    geom_violin(trim = F, scale="width") +
+                    #geom_beeswarm(dodge.width = 1, alpha = 0.3)+
+                    scale_fill_manual(labels = c("Fungi","Cercozoa"),values=c("#88CCEE", "#117733"))+
+                    geom_jitter(position = position_jitter(width = 0.1, height = 0, seed=13), alpha=0.3)+
+                    theme_bw()+
+                    expand_limits(x = 0, y = 0)+
+                    #geom_text(data=sum_rich_plant_new, aes(x=Plant,y=2+max.rich,label=Letter), vjust=0)+
+                    labs(title = "A")+
+                    ylab("Read Proportion (%)")+
+                    theme(legend.position="none",
+                          #axis.text.x=element_blank(),
+                          #axis.ticks.x = element_blank(),
+                          axis.title.x = element_blank(),
+                          axis.text= element_text(size = 14),
+                          strip.text = element_text(size=18, face = 'bold'),
+                          plot.title = element_text(size = 14, face = 'bold'),
+                          #axis.title.y=element_text(size=13,face="bold"),
+                          axis.title.y = element_markdown(size=15,face="bold"),
+                          plot.background = element_blank(),
+                          panel.grid.major = element_blank(),
+                          panel.grid.minor = element_blank())+
+                          #plot.margin = unit(c(0, 0, 0, 0), "cm"))
+                          stat_summary(fun="median",geom="point", size=7, color="red", shape=95)
+                          #width=1, position=position_dodge(),show.legend = FALSE)
+
+plot.unfil.king.its
+
+
+### Occupancy across control and water withholding plants
+
+colnames(otu.its.filt)
+otuCD.its <- data.frame(otu.its.filt[,c(1:16)])
+colnames(otuCD.its)
+otuCD.its <- column_to_rownames(otuCD.its, var = "OTU_ID")
+##calculate the occupancy of each otu across control and water withholding plants
+otuCD.its.PA <- 1*((otuCD.its>0)==1)
+Occ.CD.its <- rowSums(otuCD.its.PA)/ncol(otuCD.its.PA)
+df.Occ.CD.its <- as.data.frame(Occ.CD.its)
+df.Occ.CD.its <- rownames_to_column(df.Occ.CD.its, var = "OTU_ID")
+head(tax.its.filt)
+df.Occ.CD.its.tax <- merge(df.Occ.CD.its, tax.its.filt, by="OTU_ID")
+sort.df.Occ.CD.its.tax <- df.Occ.CD.its.tax[order(df.Occ.CD.its.tax$Occ.CD.its, decreasing = TRUE),]
+write.csv(sort.df.Occ.CD.its.tax, file = "sort.occ.CD.its.csv")
+
+### Occupancy across control and nutrient addition plants
+
+colnames(otu.its.filt)
+otuCN.its <- data.frame(otu.its.filt[,c(1:9,17:23)])
+colnames(otuCN.its)
+otuCN.its <- column_to_rownames(otuCN.its, var = "OTU_ID")
+##calculate the occupancy of each otu across control and water withholding plants
+otuCN.its.PA <- 1*((otuCN.its>0)==1)
+Occ.CN.its <- rowSums(otuCN.its.PA)/ncol(otuCN.its.PA)
+df.Occ.CN.its <- as.data.frame(Occ.CN.its)
+df.Occ.CN.its <- rownames_to_column(df.Occ.CN.its, var = "OTU_ID")
+head(tax.its.filt)
+df.Occ.CN.its.tax <- merge(df.Occ.CN.its, tax.its.filt, by="OTU_ID")
+sort.df.Occ.CN.its.tax <- df.Occ.CN.its.tax[order(df.Occ.CN.its.tax$Occ.CN.its, decreasing = TRUE),]
+write.csv(sort.df.Occ.CN.its.tax, file = "sort.occ.CN.its.csv")
 
 

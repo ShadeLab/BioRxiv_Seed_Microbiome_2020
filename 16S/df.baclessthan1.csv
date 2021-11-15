@@ -1,0 +1,529 @@
+"","Sample","Treatment","Genus","Mean"
+"1","C3","Control"," Bacillus",1
+"2","C6","Control"," Bacillus",1
+"3","C2","Control"," Bacillus",0.999910209212535
+"4","C4","Control"," Bacillus",0.999910209212535
+"5","C1","Control"," Bacillus",0.99982041842507
+"6","N8","Nutrient addition"," Bacillus",0.99982041842507
+"7","C7","Control"," Bacillus",0.999730627637604
+"8","C8","Control"," Bacillus",0.999730627637604
+"9","C5","Control"," Bacillus",0.999640836850139
+"10","N7","Nutrient addition"," Bacillus",0.999461255275209
+"11","N2","Nutrient addition"," Bacillus",0.995420669839274
+"12","N3","Nutrient addition"," Bacillus",0.995420669839274
+"13","D2","Water withholding"," Bacillus",0.994702343539553
+"14","D1","Water withholding"," Bacillus",0.994432971177157
+"15","N1","Nutrient addition"," Bacillus",0.993175900152644
+"16","D5","Water withholding"," Bacillus",0.924216575379366
+"17","D4","Water withholding"," Bacillus",0.915506868995241
+"18","D3","Water withholding"," Bacillus",0.907964442848164
+"19","N5","Nutrient addition"," Bacillus",0.705306635539194
+"20","N6","Nutrient addition"," Bacillus",0.696956092304929
+"21","D8","Water withholding"," Bacillus",0.680973332136123
+"22","D7","Water withholding"," Bacillus",0.67298195205172
+"23","D6","Water withholding"," Bacillus",0.665529316692107
+"24","N4","Nutrient addition"," Bacillus",0.664002873305199
+"25","D6","Water withholding"," Virgibacillus",0.326299721648559
+"26","D7","Water withholding"," Virgibacillus",0.319655203376134
+"27","D8","Water withholding"," Virgibacillus",0.311214869354404
+"28","N4","Nutrient addition"," Virgibacillus",0.193409356200054
+"29","N5","Nutrient addition"," Virgibacillus",0.190715632576098
+"30","N6","Nutrient addition"," Virgibacillus",0.180299901230134
+"31","N4","Nutrient addition"," Pseudomonas",0.134327018047948
+"32","N6","Nutrient addition"," Pseudomonas",0.112687438268834
+"33","N5","Nutrient addition"," Pseudomonas",0.0950884439256532
+"34","D3","Water withholding"," Virgibacillus",0.0861991559665978
+"35","D4","Water withholding"," Virgibacillus",0.077579240369938
+"36","D5","Water withholding"," Virgibacillus",0.0659064379994613
+"37","D5","Water withholding","Other (mean relative abundance < 1%)",0.0088892879590554
+"38","N1","Nutrient addition","Other (mean relative abundance < 1%)",0.0059261919727036
+"39","D6","Water withholding","Other (mean relative abundance < 1%)",0.00520786567298195
+"40","D4","Water withholding","Other (mean relative abundance < 1%)",0.00502828409805154
+"41","D1","Water withholding","Other (mean relative abundance < 1%)",0.00475891173565592
+"42","D7","Water withholding","Other (mean relative abundance < 1%)",0.00475891173565592
+"43","N6","Nutrient addition","Other (mean relative abundance < 1%)",0.00466912094819072
+"44","D8","Water withholding","Other (mean relative abundance < 1%)",0.0044895393732603
+"45","D3","Water withholding","Other (mean relative abundance < 1%)",0.00422016701086469
+"46","N3","Nutrient addition","Other (mean relative abundance < 1%)",0.00413037622339948
+"47","N5","Nutrient addition","Other (mean relative abundance < 1%)",0.00413037622339948
+"48","D2","Water withholding","Other (mean relative abundance < 1%)",0.00404058543593427
+"49","N2","Nutrient addition","Other (mean relative abundance < 1%)",0.00377121307353866
+"50","N4","Nutrient addition","Other (mean relative abundance < 1%)",0.00269372362395618
+"51","D6","Water withholding","Other (mean relative abundance < 1%)",0.00197539732423453
+"52","D8","Water withholding","Other (mean relative abundance < 1%)",0.00197539732423453
+"53","N4","Nutrient addition","Other (mean relative abundance < 1%)",0.00188560653676933
+"54","N6","Nutrient addition","Other (mean relative abundance < 1%)",0.00188560653676933
+"55","D4","Water withholding","Other (mean relative abundance < 1%)",0.00179581574930412
+"56","N5","Nutrient addition","Other (mean relative abundance < 1%)",0.00179581574930412
+"57","N4","Nutrient addition","Other (mean relative abundance < 1%)",0.00170602496183892
+"58","N6","Nutrient addition","Other (mean relative abundance < 1%)",0.00161623417437371
+"59","D3","Water withholding","Other (mean relative abundance < 1%)",0.00134686181197809
+"60","D2","Water withholding","Other (mean relative abundance < 1%)",0.00125707102451289
+"61","D7","Water withholding","Other (mean relative abundance < 1%)",0.00107748944958247
+"62","D7","Water withholding","Other (mean relative abundance < 1%)",0.000987698662117267
+"63","N4","Nutrient addition","Other (mean relative abundance < 1%)",0.000987698662117267
+"64","N5","Nutrient addition","Other (mean relative abundance < 1%)",0.000987698662117267
+"65","D5","Water withholding","Other (mean relative abundance < 1%)",0.000897907874652061
+"66","N5","Nutrient addition","Other (mean relative abundance < 1%)",0.000897907874652061
+"67","D8","Water withholding","Other (mean relative abundance < 1%)",0.000808117087186855
+"68","N2","Nutrient addition","Other (mean relative abundance < 1%)",0.000718326299721649
+"69","D6","Water withholding","Other (mean relative abundance < 1%)",0.000628535512256443
+"70","N1","Nutrient addition","Other (mean relative abundance < 1%)",0.000628535512256443
+"71","N5","Nutrient addition","Other (mean relative abundance < 1%)",0.000628535512256443
+"72","N6","Nutrient addition","Other (mean relative abundance < 1%)",0.000628535512256443
+"73","N6","Nutrient addition","Other (mean relative abundance < 1%)",0.000628535512256443
+"74","D1","Water withholding","Other (mean relative abundance < 1%)",0.000538744724791236
+"75","D7","Water withholding","Other (mean relative abundance < 1%)",0.00044895393732603
+"76","N4","Nutrient addition","Other (mean relative abundance < 1%)",0.00044895393732603
+"77","N3","Nutrient addition","Other (mean relative abundance < 1%)",0.000359163149860824
+"78","N4","Nutrient addition","Other (mean relative abundance < 1%)",0.000359163149860824
+"79","N7","Nutrient addition","Other (mean relative abundance < 1%)",0.000359163149860824
+"80","C7","Control","Other (mean relative abundance < 1%)",0.000269372362395618
+"81","C8","Control","Other (mean relative abundance < 1%)",0.000269372362395618
+"82","N6","Nutrient addition","Other (mean relative abundance < 1%)",0.000269372362395618
+"83","C5","Control","Other (mean relative abundance < 1%)",0.000179581574930412
+"84","D3","Water withholding","Other (mean relative abundance < 1%)",0.000179581574930412
+"85","D6","Water withholding","Other (mean relative abundance < 1%)",0.000179581574930412
+"86","D6","Water withholding","Other (mean relative abundance < 1%)",0.000179581574930412
+"87","D8","Water withholding","Other (mean relative abundance < 1%)",0.000179581574930412
+"88","D8","Water withholding","Other (mean relative abundance < 1%)",0.000179581574930412
+"89","N1","Nutrient addition","Other (mean relative abundance < 1%)",0.000179581574930412
+"90","N5","Nutrient addition","Other (mean relative abundance < 1%)",0.000179581574930412
+"91","N6","Nutrient addition","Other (mean relative abundance < 1%)",0.000179581574930412
+"92","N6","Nutrient addition","Other (mean relative abundance < 1%)",0.000179581574930412
+"93","C1","Control","Other (mean relative abundance < 1%)",8.97907874652061e-05
+"94","C1","Control","Other (mean relative abundance < 1%)",8.97907874652061e-05
+"95","C2","Control","Other (mean relative abundance < 1%)",8.97907874652061e-05
+"96","C4","Control","Other (mean relative abundance < 1%)",8.97907874652061e-05
+"97","C5","Control","Other (mean relative abundance < 1%)",8.97907874652061e-05
+"98","C5","Control","Other (mean relative abundance < 1%)",8.97907874652061e-05
+"99","D1","Water withholding","Other (mean relative abundance < 1%)",8.97907874652061e-05
+"100","D1","Water withholding","Other (mean relative abundance < 1%)",8.97907874652061e-05
+"101","D1","Water withholding","Other (mean relative abundance < 1%)",8.97907874652061e-05
+"102","D3","Water withholding","Other (mean relative abundance < 1%)",8.97907874652061e-05
+"103","D4","Water withholding","Other (mean relative abundance < 1%)",8.97907874652061e-05
+"104","D5","Water withholding","Other (mean relative abundance < 1%)",8.97907874652061e-05
+"105","D7","Water withholding","Other (mean relative abundance < 1%)",8.97907874652061e-05
+"106","D8","Water withholding","Other (mean relative abundance < 1%)",8.97907874652061e-05
+"107","D8","Water withholding","Other (mean relative abundance < 1%)",8.97907874652061e-05
+"108","N1","Nutrient addition","Other (mean relative abundance < 1%)",8.97907874652061e-05
+"109","N2","Nutrient addition","Other (mean relative abundance < 1%)",8.97907874652061e-05
+"110","N3","Nutrient addition","Other (mean relative abundance < 1%)",8.97907874652061e-05
+"111","N4","Nutrient addition","Other (mean relative abundance < 1%)",8.97907874652061e-05
+"112","N4","Nutrient addition","Other (mean relative abundance < 1%)",8.97907874652061e-05
+"113","N5","Nutrient addition","Other (mean relative abundance < 1%)",8.97907874652061e-05
+"114","N5","Nutrient addition","Other (mean relative abundance < 1%)",8.97907874652061e-05
+"115","N5","Nutrient addition","Other (mean relative abundance < 1%)",8.97907874652061e-05
+"116","N7","Nutrient addition","Other (mean relative abundance < 1%)",8.97907874652061e-05
+"117","N7","Nutrient addition","Other (mean relative abundance < 1%)",8.97907874652061e-05
+"118","N8","Nutrient addition","Other (mean relative abundance < 1%)",8.97907874652061e-05
+"119","N8","Nutrient addition","Other (mean relative abundance < 1%)",8.97907874652061e-05
+"120","C1","Control","Other (mean relative abundance < 1%)",0
+"121","C1","Control","Other (mean relative abundance < 1%)",0
+"122","C1","Control","Other (mean relative abundance < 1%)",0
+"123","C1","Control","Other (mean relative abundance < 1%)",0
+"124","C1","Control","Other (mean relative abundance < 1%)",0
+"125","C1","Control","Other (mean relative abundance < 1%)",0
+"126","C1","Control","Other (mean relative abundance < 1%)",0
+"127","C1","Control","Other (mean relative abundance < 1%)",0
+"128","C1","Control","Other (mean relative abundance < 1%)",0
+"129","C1","Control","Other (mean relative abundance < 1%)",0
+"130","C1","Control","Other (mean relative abundance < 1%)",0
+"131","C1","Control","Other (mean relative abundance < 1%)",0
+"132","C1","Control","Other (mean relative abundance < 1%)",0
+"133","C1","Control","Other (mean relative abundance < 1%)",0
+"134","C1","Control","Other (mean relative abundance < 1%)",0
+"135","C1","Control","Other (mean relative abundance < 1%)",0
+"136","C1","Control","Other (mean relative abundance < 1%)",0
+"137","C1","Control","Other (mean relative abundance < 1%)",0
+"138","C1","Control","Other (mean relative abundance < 1%)",0
+"139","C2","Control","Other (mean relative abundance < 1%)",0
+"140","C2","Control","Other (mean relative abundance < 1%)",0
+"141","C2","Control","Other (mean relative abundance < 1%)",0
+"142","C2","Control","Other (mean relative abundance < 1%)",0
+"143","C2","Control","Other (mean relative abundance < 1%)",0
+"144","C2","Control","Other (mean relative abundance < 1%)",0
+"145","C2","Control","Other (mean relative abundance < 1%)",0
+"146","C2","Control","Other (mean relative abundance < 1%)",0
+"147","C2","Control","Other (mean relative abundance < 1%)",0
+"148","C2","Control","Other (mean relative abundance < 1%)",0
+"149","C2","Control","Other (mean relative abundance < 1%)",0
+"150","C2","Control","Other (mean relative abundance < 1%)",0
+"151","C2","Control","Other (mean relative abundance < 1%)",0
+"152","C2","Control","Other (mean relative abundance < 1%)",0
+"153","C2","Control","Other (mean relative abundance < 1%)",0
+"154","C2","Control","Other (mean relative abundance < 1%)",0
+"155","C2","Control","Other (mean relative abundance < 1%)",0
+"156","C2","Control","Other (mean relative abundance < 1%)",0
+"157","C2","Control","Other (mean relative abundance < 1%)",0
+"158","C2","Control","Other (mean relative abundance < 1%)",0
+"159","C3","Control","Other (mean relative abundance < 1%)",0
+"160","C3","Control","Other (mean relative abundance < 1%)",0
+"161","C3","Control","Other (mean relative abundance < 1%)",0
+"162","C3","Control","Other (mean relative abundance < 1%)",0
+"163","C3","Control","Other (mean relative abundance < 1%)",0
+"164","C3","Control","Other (mean relative abundance < 1%)",0
+"165","C3","Control","Other (mean relative abundance < 1%)",0
+"166","C3","Control","Other (mean relative abundance < 1%)",0
+"167","C3","Control","Other (mean relative abundance < 1%)",0
+"168","C3","Control","Other (mean relative abundance < 1%)",0
+"169","C3","Control","Other (mean relative abundance < 1%)",0
+"170","C3","Control","Other (mean relative abundance < 1%)",0
+"171","C3","Control","Other (mean relative abundance < 1%)",0
+"172","C3","Control","Other (mean relative abundance < 1%)",0
+"173","C3","Control","Other (mean relative abundance < 1%)",0
+"174","C3","Control","Other (mean relative abundance < 1%)",0
+"175","C3","Control","Other (mean relative abundance < 1%)",0
+"176","C3","Control","Other (mean relative abundance < 1%)",0
+"177","C3","Control","Other (mean relative abundance < 1%)",0
+"178","C3","Control","Other (mean relative abundance < 1%)",0
+"179","C3","Control","Other (mean relative abundance < 1%)",0
+"180","C4","Control","Other (mean relative abundance < 1%)",0
+"181","C4","Control","Other (mean relative abundance < 1%)",0
+"182","C4","Control","Other (mean relative abundance < 1%)",0
+"183","C4","Control","Other (mean relative abundance < 1%)",0
+"184","C4","Control","Other (mean relative abundance < 1%)",0
+"185","C4","Control","Other (mean relative abundance < 1%)",0
+"186","C4","Control","Other (mean relative abundance < 1%)",0
+"187","C4","Control","Other (mean relative abundance < 1%)",0
+"188","C4","Control","Other (mean relative abundance < 1%)",0
+"189","C4","Control","Other (mean relative abundance < 1%)",0
+"190","C4","Control","Other (mean relative abundance < 1%)",0
+"191","C4","Control","Other (mean relative abundance < 1%)",0
+"192","C4","Control","Other (mean relative abundance < 1%)",0
+"193","C4","Control","Other (mean relative abundance < 1%)",0
+"194","C4","Control","Other (mean relative abundance < 1%)",0
+"195","C4","Control","Other (mean relative abundance < 1%)",0
+"196","C4","Control","Other (mean relative abundance < 1%)",0
+"197","C4","Control","Other (mean relative abundance < 1%)",0
+"198","C4","Control","Other (mean relative abundance < 1%)",0
+"199","C4","Control","Other (mean relative abundance < 1%)",0
+"200","C5","Control","Other (mean relative abundance < 1%)",0
+"201","C5","Control","Other (mean relative abundance < 1%)",0
+"202","C5","Control","Other (mean relative abundance < 1%)",0
+"203","C5","Control","Other (mean relative abundance < 1%)",0
+"204","C5","Control","Other (mean relative abundance < 1%)",0
+"205","C5","Control","Other (mean relative abundance < 1%)",0
+"206","C5","Control","Other (mean relative abundance < 1%)",0
+"207","C5","Control","Other (mean relative abundance < 1%)",0
+"208","C5","Control","Other (mean relative abundance < 1%)",0
+"209","C5","Control","Other (mean relative abundance < 1%)",0
+"210","C5","Control","Other (mean relative abundance < 1%)",0
+"211","C5","Control","Other (mean relative abundance < 1%)",0
+"212","C5","Control","Other (mean relative abundance < 1%)",0
+"213","C5","Control","Other (mean relative abundance < 1%)",0
+"214","C5","Control","Other (mean relative abundance < 1%)",0
+"215","C5","Control","Other (mean relative abundance < 1%)",0
+"216","C5","Control","Other (mean relative abundance < 1%)",0
+"217","C5","Control","Other (mean relative abundance < 1%)",0
+"218","C6","Control","Other (mean relative abundance < 1%)",0
+"219","C6","Control","Other (mean relative abundance < 1%)",0
+"220","C6","Control","Other (mean relative abundance < 1%)",0
+"221","C6","Control","Other (mean relative abundance < 1%)",0
+"222","C6","Control","Other (mean relative abundance < 1%)",0
+"223","C6","Control","Other (mean relative abundance < 1%)",0
+"224","C6","Control","Other (mean relative abundance < 1%)",0
+"225","C6","Control","Other (mean relative abundance < 1%)",0
+"226","C6","Control","Other (mean relative abundance < 1%)",0
+"227","C6","Control","Other (mean relative abundance < 1%)",0
+"228","C6","Control","Other (mean relative abundance < 1%)",0
+"229","C6","Control","Other (mean relative abundance < 1%)",0
+"230","C6","Control","Other (mean relative abundance < 1%)",0
+"231","C6","Control","Other (mean relative abundance < 1%)",0
+"232","C6","Control","Other (mean relative abundance < 1%)",0
+"233","C6","Control","Other (mean relative abundance < 1%)",0
+"234","C6","Control","Other (mean relative abundance < 1%)",0
+"235","C6","Control","Other (mean relative abundance < 1%)",0
+"236","C6","Control","Other (mean relative abundance < 1%)",0
+"237","C6","Control","Other (mean relative abundance < 1%)",0
+"238","C6","Control","Other (mean relative abundance < 1%)",0
+"239","C7","Control","Other (mean relative abundance < 1%)",0
+"240","C7","Control","Other (mean relative abundance < 1%)",0
+"241","C7","Control","Other (mean relative abundance < 1%)",0
+"242","C7","Control","Other (mean relative abundance < 1%)",0
+"243","C7","Control","Other (mean relative abundance < 1%)",0
+"244","C7","Control","Other (mean relative abundance < 1%)",0
+"245","C7","Control","Other (mean relative abundance < 1%)",0
+"246","C7","Control","Other (mean relative abundance < 1%)",0
+"247","C7","Control","Other (mean relative abundance < 1%)",0
+"248","C7","Control","Other (mean relative abundance < 1%)",0
+"249","C7","Control","Other (mean relative abundance < 1%)",0
+"250","C7","Control","Other (mean relative abundance < 1%)",0
+"251","C7","Control","Other (mean relative abundance < 1%)",0
+"252","C7","Control","Other (mean relative abundance < 1%)",0
+"253","C7","Control","Other (mean relative abundance < 1%)",0
+"254","C7","Control","Other (mean relative abundance < 1%)",0
+"255","C7","Control","Other (mean relative abundance < 1%)",0
+"256","C7","Control","Other (mean relative abundance < 1%)",0
+"257","C7","Control","Other (mean relative abundance < 1%)",0
+"258","C7","Control","Other (mean relative abundance < 1%)",0
+"259","C8","Control","Other (mean relative abundance < 1%)",0
+"260","C8","Control","Other (mean relative abundance < 1%)",0
+"261","C8","Control","Other (mean relative abundance < 1%)",0
+"262","C8","Control","Other (mean relative abundance < 1%)",0
+"263","C8","Control","Other (mean relative abundance < 1%)",0
+"264","C8","Control","Other (mean relative abundance < 1%)",0
+"265","C8","Control","Other (mean relative abundance < 1%)",0
+"266","C8","Control","Other (mean relative abundance < 1%)",0
+"267","C8","Control","Other (mean relative abundance < 1%)",0
+"268","C8","Control","Other (mean relative abundance < 1%)",0
+"269","C8","Control","Other (mean relative abundance < 1%)",0
+"270","C8","Control","Other (mean relative abundance < 1%)",0
+"271","C8","Control","Other (mean relative abundance < 1%)",0
+"272","C8","Control","Other (mean relative abundance < 1%)",0
+"273","C8","Control","Other (mean relative abundance < 1%)",0
+"274","C8","Control","Other (mean relative abundance < 1%)",0
+"275","C8","Control","Other (mean relative abundance < 1%)",0
+"276","C8","Control","Other (mean relative abundance < 1%)",0
+"277","C8","Control","Other (mean relative abundance < 1%)",0
+"278","C8","Control","Other (mean relative abundance < 1%)",0
+"279","D1","Water withholding","Other (mean relative abundance < 1%)",0
+"280","D1","Water withholding","Other (mean relative abundance < 1%)",0
+"281","D1","Water withholding","Other (mean relative abundance < 1%)",0
+"282","D1","Water withholding","Other (mean relative abundance < 1%)",0
+"283","D1","Water withholding","Other (mean relative abundance < 1%)",0
+"284","D1","Water withholding","Other (mean relative abundance < 1%)",0
+"285","D1","Water withholding","Other (mean relative abundance < 1%)",0
+"286","D1","Water withholding","Other (mean relative abundance < 1%)",0
+"287","D1","Water withholding","Other (mean relative abundance < 1%)",0
+"288","D1","Water withholding","Other (mean relative abundance < 1%)",0
+"289","D1","Water withholding","Other (mean relative abundance < 1%)",0
+"290","D1","Water withholding","Other (mean relative abundance < 1%)",0
+"291","D1","Water withholding","Other (mean relative abundance < 1%)",0
+"292","D1","Water withholding","Other (mean relative abundance < 1%)",0
+"293","D1","Water withholding","Other (mean relative abundance < 1%)",0
+"294","D1","Water withholding","Other (mean relative abundance < 1%)",0
+"295","D2","Water withholding","Other (mean relative abundance < 1%)",0
+"296","D2","Water withholding","Other (mean relative abundance < 1%)",0
+"297","D2","Water withholding","Other (mean relative abundance < 1%)",0
+"298","D2","Water withholding","Other (mean relative abundance < 1%)",0
+"299","D2","Water withholding","Other (mean relative abundance < 1%)",0
+"300","D2","Water withholding","Other (mean relative abundance < 1%)",0
+"301","D2","Water withholding","Other (mean relative abundance < 1%)",0
+"302","D2","Water withholding","Other (mean relative abundance < 1%)",0
+"303","D2","Water withholding","Other (mean relative abundance < 1%)",0
+"304","D2","Water withholding","Other (mean relative abundance < 1%)",0
+"305","D2","Water withholding","Other (mean relative abundance < 1%)",0
+"306","D2","Water withholding","Other (mean relative abundance < 1%)",0
+"307","D2","Water withholding","Other (mean relative abundance < 1%)",0
+"308","D2","Water withholding","Other (mean relative abundance < 1%)",0
+"309","D2","Water withholding","Other (mean relative abundance < 1%)",0
+"310","D2","Water withholding","Other (mean relative abundance < 1%)",0
+"311","D2","Water withholding","Other (mean relative abundance < 1%)",0
+"312","D2","Water withholding","Other (mean relative abundance < 1%)",0
+"313","D2","Water withholding","Other (mean relative abundance < 1%)",0
+"314","D3","Water withholding","Other (mean relative abundance < 1%)",0
+"315","D3","Water withholding","Other (mean relative abundance < 1%)",0
+"316","D3","Water withholding","Other (mean relative abundance < 1%)",0
+"317","D3","Water withholding","Other (mean relative abundance < 1%)",0
+"318","D3","Water withholding","Other (mean relative abundance < 1%)",0
+"319","D3","Water withholding","Other (mean relative abundance < 1%)",0
+"320","D3","Water withholding","Other (mean relative abundance < 1%)",0
+"321","D3","Water withholding","Other (mean relative abundance < 1%)",0
+"322","D3","Water withholding","Other (mean relative abundance < 1%)",0
+"323","D3","Water withholding","Other (mean relative abundance < 1%)",0
+"324","D3","Water withholding","Other (mean relative abundance < 1%)",0
+"325","D3","Water withholding","Other (mean relative abundance < 1%)",0
+"326","D3","Water withholding","Other (mean relative abundance < 1%)",0
+"327","D3","Water withholding","Other (mean relative abundance < 1%)",0
+"328","D3","Water withholding","Other (mean relative abundance < 1%)",0
+"329","D3","Water withholding","Other (mean relative abundance < 1%)",0
+"330","D4","Water withholding","Other (mean relative abundance < 1%)",0
+"331","D4","Water withholding","Other (mean relative abundance < 1%)",0
+"332","D4","Water withholding","Other (mean relative abundance < 1%)",0
+"333","D4","Water withholding","Other (mean relative abundance < 1%)",0
+"334","D4","Water withholding","Other (mean relative abundance < 1%)",0
+"335","D4","Water withholding","Other (mean relative abundance < 1%)",0
+"336","D4","Water withholding","Other (mean relative abundance < 1%)",0
+"337","D4","Water withholding","Other (mean relative abundance < 1%)",0
+"338","D4","Water withholding","Other (mean relative abundance < 1%)",0
+"339","D4","Water withholding","Other (mean relative abundance < 1%)",0
+"340","D4","Water withholding","Other (mean relative abundance < 1%)",0
+"341","D4","Water withholding","Other (mean relative abundance < 1%)",0
+"342","D4","Water withholding","Other (mean relative abundance < 1%)",0
+"343","D4","Water withholding","Other (mean relative abundance < 1%)",0
+"344","D4","Water withholding","Other (mean relative abundance < 1%)",0
+"345","D4","Water withholding","Other (mean relative abundance < 1%)",0
+"346","D4","Water withholding","Other (mean relative abundance < 1%)",0
+"347","D5","Water withholding","Other (mean relative abundance < 1%)",0
+"348","D5","Water withholding","Other (mean relative abundance < 1%)",0
+"349","D5","Water withholding","Other (mean relative abundance < 1%)",0
+"350","D5","Water withholding","Other (mean relative abundance < 1%)",0
+"351","D5","Water withholding","Other (mean relative abundance < 1%)",0
+"352","D5","Water withholding","Other (mean relative abundance < 1%)",0
+"353","D5","Water withholding","Other (mean relative abundance < 1%)",0
+"354","D5","Water withholding","Other (mean relative abundance < 1%)",0
+"355","D5","Water withholding","Other (mean relative abundance < 1%)",0
+"356","D5","Water withholding","Other (mean relative abundance < 1%)",0
+"357","D5","Water withholding","Other (mean relative abundance < 1%)",0
+"358","D5","Water withholding","Other (mean relative abundance < 1%)",0
+"359","D5","Water withholding","Other (mean relative abundance < 1%)",0
+"360","D5","Water withholding","Other (mean relative abundance < 1%)",0
+"361","D5","Water withholding","Other (mean relative abundance < 1%)",0
+"362","D5","Water withholding","Other (mean relative abundance < 1%)",0
+"363","D5","Water withholding","Other (mean relative abundance < 1%)",0
+"364","D6","Water withholding","Other (mean relative abundance < 1%)",0
+"365","D6","Water withholding","Other (mean relative abundance < 1%)",0
+"366","D6","Water withholding","Other (mean relative abundance < 1%)",0
+"367","D6","Water withholding","Other (mean relative abundance < 1%)",0
+"368","D6","Water withholding","Other (mean relative abundance < 1%)",0
+"369","D6","Water withholding","Other (mean relative abundance < 1%)",0
+"370","D6","Water withholding","Other (mean relative abundance < 1%)",0
+"371","D6","Water withholding","Other (mean relative abundance < 1%)",0
+"372","D6","Water withholding","Other (mean relative abundance < 1%)",0
+"373","D6","Water withholding","Other (mean relative abundance < 1%)",0
+"374","D6","Water withholding","Other (mean relative abundance < 1%)",0
+"375","D6","Water withholding","Other (mean relative abundance < 1%)",0
+"376","D6","Water withholding","Other (mean relative abundance < 1%)",0
+"377","D6","Water withholding","Other (mean relative abundance < 1%)",0
+"378","D6","Water withholding","Other (mean relative abundance < 1%)",0
+"379","D7","Water withholding","Other (mean relative abundance < 1%)",0
+"380","D7","Water withholding","Other (mean relative abundance < 1%)",0
+"381","D7","Water withholding","Other (mean relative abundance < 1%)",0
+"382","D7","Water withholding","Other (mean relative abundance < 1%)",0
+"383","D7","Water withholding","Other (mean relative abundance < 1%)",0
+"384","D7","Water withholding","Other (mean relative abundance < 1%)",0
+"385","D7","Water withholding","Other (mean relative abundance < 1%)",0
+"386","D7","Water withholding","Other (mean relative abundance < 1%)",0
+"387","D7","Water withholding","Other (mean relative abundance < 1%)",0
+"388","D7","Water withholding","Other (mean relative abundance < 1%)",0
+"389","D7","Water withholding","Other (mean relative abundance < 1%)",0
+"390","D7","Water withholding","Other (mean relative abundance < 1%)",0
+"391","D7","Water withholding","Other (mean relative abundance < 1%)",0
+"392","D7","Water withholding","Other (mean relative abundance < 1%)",0
+"393","D7","Water withholding","Other (mean relative abundance < 1%)",0
+"394","D8","Water withholding","Other (mean relative abundance < 1%)",0
+"395","D8","Water withholding","Other (mean relative abundance < 1%)",0
+"396","D8","Water withholding","Other (mean relative abundance < 1%)",0
+"397","D8","Water withholding","Other (mean relative abundance < 1%)",0
+"398","D8","Water withholding","Other (mean relative abundance < 1%)",0
+"399","D8","Water withholding","Other (mean relative abundance < 1%)",0
+"400","D8","Water withholding","Other (mean relative abundance < 1%)",0
+"401","D8","Water withholding","Other (mean relative abundance < 1%)",0
+"402","D8","Water withholding","Other (mean relative abundance < 1%)",0
+"403","D8","Water withholding","Other (mean relative abundance < 1%)",0
+"404","D8","Water withholding","Other (mean relative abundance < 1%)",0
+"405","D8","Water withholding","Other (mean relative abundance < 1%)",0
+"406","D8","Water withholding","Other (mean relative abundance < 1%)",0
+"407","N1","Nutrient addition","Other (mean relative abundance < 1%)",0
+"408","N1","Nutrient addition","Other (mean relative abundance < 1%)",0
+"409","N1","Nutrient addition","Other (mean relative abundance < 1%)",0
+"410","N1","Nutrient addition","Other (mean relative abundance < 1%)",0
+"411","N1","Nutrient addition","Other (mean relative abundance < 1%)",0
+"412","N1","Nutrient addition","Other (mean relative abundance < 1%)",0
+"413","N1","Nutrient addition","Other (mean relative abundance < 1%)",0
+"414","N1","Nutrient addition","Other (mean relative abundance < 1%)",0
+"415","N1","Nutrient addition","Other (mean relative abundance < 1%)",0
+"416","N1","Nutrient addition","Other (mean relative abundance < 1%)",0
+"417","N1","Nutrient addition","Other (mean relative abundance < 1%)",0
+"418","N1","Nutrient addition","Other (mean relative abundance < 1%)",0
+"419","N1","Nutrient addition","Other (mean relative abundance < 1%)",0
+"420","N1","Nutrient addition","Other (mean relative abundance < 1%)",0
+"421","N1","Nutrient addition","Other (mean relative abundance < 1%)",0
+"422","N1","Nutrient addition","Other (mean relative abundance < 1%)",0
+"423","N1","Nutrient addition","Other (mean relative abundance < 1%)",0
+"424","N2","Nutrient addition","Other (mean relative abundance < 1%)",0
+"425","N2","Nutrient addition","Other (mean relative abundance < 1%)",0
+"426","N2","Nutrient addition","Other (mean relative abundance < 1%)",0
+"427","N2","Nutrient addition","Other (mean relative abundance < 1%)",0
+"428","N2","Nutrient addition","Other (mean relative abundance < 1%)",0
+"429","N2","Nutrient addition","Other (mean relative abundance < 1%)",0
+"430","N2","Nutrient addition","Other (mean relative abundance < 1%)",0
+"431","N2","Nutrient addition","Other (mean relative abundance < 1%)",0
+"432","N2","Nutrient addition","Other (mean relative abundance < 1%)",0
+"433","N2","Nutrient addition","Other (mean relative abundance < 1%)",0
+"434","N2","Nutrient addition","Other (mean relative abundance < 1%)",0
+"435","N2","Nutrient addition","Other (mean relative abundance < 1%)",0
+"436","N2","Nutrient addition","Other (mean relative abundance < 1%)",0
+"437","N2","Nutrient addition","Other (mean relative abundance < 1%)",0
+"438","N2","Nutrient addition","Other (mean relative abundance < 1%)",0
+"439","N2","Nutrient addition","Other (mean relative abundance < 1%)",0
+"440","N2","Nutrient addition","Other (mean relative abundance < 1%)",0
+"441","N2","Nutrient addition","Other (mean relative abundance < 1%)",0
+"442","N3","Nutrient addition","Other (mean relative abundance < 1%)",0
+"443","N3","Nutrient addition","Other (mean relative abundance < 1%)",0
+"444","N3","Nutrient addition","Other (mean relative abundance < 1%)",0
+"445","N3","Nutrient addition","Other (mean relative abundance < 1%)",0
+"446","N3","Nutrient addition","Other (mean relative abundance < 1%)",0
+"447","N3","Nutrient addition","Other (mean relative abundance < 1%)",0
+"448","N3","Nutrient addition","Other (mean relative abundance < 1%)",0
+"449","N3","Nutrient addition","Other (mean relative abundance < 1%)",0
+"450","N3","Nutrient addition","Other (mean relative abundance < 1%)",0
+"451","N3","Nutrient addition","Other (mean relative abundance < 1%)",0
+"452","N3","Nutrient addition","Other (mean relative abundance < 1%)",0
+"453","N3","Nutrient addition","Other (mean relative abundance < 1%)",0
+"454","N3","Nutrient addition","Other (mean relative abundance < 1%)",0
+"455","N3","Nutrient addition","Other (mean relative abundance < 1%)",0
+"456","N3","Nutrient addition","Other (mean relative abundance < 1%)",0
+"457","N3","Nutrient addition","Other (mean relative abundance < 1%)",0
+"458","N3","Nutrient addition","Other (mean relative abundance < 1%)",0
+"459","N3","Nutrient addition","Other (mean relative abundance < 1%)",0
+"460","N4","Nutrient addition","Other (mean relative abundance < 1%)",0
+"461","N4","Nutrient addition","Other (mean relative abundance < 1%)",0
+"462","N4","Nutrient addition","Other (mean relative abundance < 1%)",0
+"463","N4","Nutrient addition","Other (mean relative abundance < 1%)",0
+"464","N4","Nutrient addition","Other (mean relative abundance < 1%)",0
+"465","N4","Nutrient addition","Other (mean relative abundance < 1%)",0
+"466","N4","Nutrient addition","Other (mean relative abundance < 1%)",0
+"467","N4","Nutrient addition","Other (mean relative abundance < 1%)",0
+"468","N4","Nutrient addition","Other (mean relative abundance < 1%)",0
+"469","N4","Nutrient addition","Other (mean relative abundance < 1%)",0
+"470","N4","Nutrient addition","Other (mean relative abundance < 1%)",0
+"471","N5","Nutrient addition","Other (mean relative abundance < 1%)",0
+"472","N5","Nutrient addition","Other (mean relative abundance < 1%)",0
+"473","N5","Nutrient addition","Other (mean relative abundance < 1%)",0
+"474","N5","Nutrient addition","Other (mean relative abundance < 1%)",0
+"475","N5","Nutrient addition","Other (mean relative abundance < 1%)",0
+"476","N5","Nutrient addition","Other (mean relative abundance < 1%)",0
+"477","N5","Nutrient addition","Other (mean relative abundance < 1%)",0
+"478","N5","Nutrient addition","Other (mean relative abundance < 1%)",0
+"479","N5","Nutrient addition","Other (mean relative abundance < 1%)",0
+"480","N5","Nutrient addition","Other (mean relative abundance < 1%)",0
+"481","N6","Nutrient addition","Other (mean relative abundance < 1%)",0
+"482","N6","Nutrient addition","Other (mean relative abundance < 1%)",0
+"483","N6","Nutrient addition","Other (mean relative abundance < 1%)",0
+"484","N6","Nutrient addition","Other (mean relative abundance < 1%)",0
+"485","N6","Nutrient addition","Other (mean relative abundance < 1%)",0
+"486","N6","Nutrient addition","Other (mean relative abundance < 1%)",0
+"487","N6","Nutrient addition","Other (mean relative abundance < 1%)",0
+"488","N6","Nutrient addition","Other (mean relative abundance < 1%)",0
+"489","N6","Nutrient addition","Other (mean relative abundance < 1%)",0
+"490","N6","Nutrient addition","Other (mean relative abundance < 1%)",0
+"491","N6","Nutrient addition","Other (mean relative abundance < 1%)",0
+"492","N7","Nutrient addition","Other (mean relative abundance < 1%)",0
+"493","N7","Nutrient addition","Other (mean relative abundance < 1%)",0
+"494","N7","Nutrient addition","Other (mean relative abundance < 1%)",0
+"495","N7","Nutrient addition","Other (mean relative abundance < 1%)",0
+"496","N7","Nutrient addition","Other (mean relative abundance < 1%)",0
+"497","N7","Nutrient addition","Other (mean relative abundance < 1%)",0
+"498","N7","Nutrient addition","Other (mean relative abundance < 1%)",0
+"499","N7","Nutrient addition","Other (mean relative abundance < 1%)",0
+"500","N7","Nutrient addition","Other (mean relative abundance < 1%)",0
+"501","N7","Nutrient addition","Other (mean relative abundance < 1%)",0
+"502","N7","Nutrient addition","Other (mean relative abundance < 1%)",0
+"503","N7","Nutrient addition","Other (mean relative abundance < 1%)",0
+"504","N7","Nutrient addition","Other (mean relative abundance < 1%)",0
+"505","N7","Nutrient addition","Other (mean relative abundance < 1%)",0
+"506","N7","Nutrient addition","Other (mean relative abundance < 1%)",0
+"507","N7","Nutrient addition","Other (mean relative abundance < 1%)",0
+"508","N7","Nutrient addition","Other (mean relative abundance < 1%)",0
+"509","N7","Nutrient addition","Other (mean relative abundance < 1%)",0
+"510","N8","Nutrient addition","Other (mean relative abundance < 1%)",0
+"511","N8","Nutrient addition","Other (mean relative abundance < 1%)",0
+"512","N8","Nutrient addition","Other (mean relative abundance < 1%)",0
+"513","N8","Nutrient addition","Other (mean relative abundance < 1%)",0
+"514","N8","Nutrient addition","Other (mean relative abundance < 1%)",0
+"515","N8","Nutrient addition","Other (mean relative abundance < 1%)",0
+"516","N8","Nutrient addition","Other (mean relative abundance < 1%)",0
+"517","N8","Nutrient addition","Other (mean relative abundance < 1%)",0
+"518","N8","Nutrient addition","Other (mean relative abundance < 1%)",0
+"519","N8","Nutrient addition","Other (mean relative abundance < 1%)",0
+"520","N8","Nutrient addition","Other (mean relative abundance < 1%)",0
+"521","N8","Nutrient addition","Other (mean relative abundance < 1%)",0
+"522","N8","Nutrient addition","Other (mean relative abundance < 1%)",0
+"523","N8","Nutrient addition","Other (mean relative abundance < 1%)",0
+"524","N8","Nutrient addition","Other (mean relative abundance < 1%)",0
+"525","N8","Nutrient addition","Other (mean relative abundance < 1%)",0
+"526","N8","Nutrient addition","Other (mean relative abundance < 1%)",0
+"527","N8","Nutrient addition","Other (mean relative abundance < 1%)",0
+"528","N8","Nutrient addition","Other (mean relative abundance < 1%)",0

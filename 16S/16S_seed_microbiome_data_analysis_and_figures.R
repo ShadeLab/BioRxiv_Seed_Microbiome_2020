@@ -121,7 +121,7 @@ rich<-ggplot(map.pat, aes(x=factor(Treatment, level=level_order), y=Richness, fi
   labs(title = "A. Bacteria/archaea")+
   expand_limits(x = 0, y = 0)+
   scale_x_discrete(labels= label)+
-  theme(legend.position="none",
+  theme(legend.position="left",
        plot.background = element_blank(),
        panel.background = element_blank(),
        panel.grid.major = element_blank(),
@@ -283,6 +283,8 @@ bac.ra
 ###create dataframe from phyloseq object
 df.bac.genus <- data.table(psmelt(bac.ra))
 dim(df.bac.genus)
+write.csv(df.bac.genus, file = "df.bac.genus.csv")
+
 ###convert genus to character vector from a factor
 df.bac.genus$Genus <- as.character(df.bac.genus$Genus)
 ###group dataframe by Phylum, calculate median rel. abundance
@@ -318,15 +320,19 @@ df.bac <- psmelt(bac.ra) %>%
   group_by(Sample, Treatment, Genus) %>%
   summarize(Mean = mean(Abundance)) %>%
   arrange(-Mean)
+write.csv(df.bac, file = "df.bac.csv")
 
 df.bac$Genus <- as.character(df.bac$Genus)
 df.bac$Genus[df.bac$Mean < 0.01] <- "Other (mean relative abundance < 1%)"
 df.bac$Treatment = factor(df.bac$Treatment, levels=c('Control','Water withholding','Nutrient addition'))
+write.csv(df.bac, file = "df.baclessthan1.csv")
+
 # 1. barplot of bacterial/archaeal composition across samples
 library(rcartocolor)
 display_carto_all(colorblind_friendly = TRUE)
 my_colors = carto_pal(7, "Safe")
 my_colors
+
 
 genus <- ggplot(data=df.bac, aes(x=Sample, y=Mean, fill=Genus))
 barplot.genus <- genus + 
@@ -430,7 +436,7 @@ barplot.genus.treat <- genus.trt +
 barplot.genus.treat
 
 # 1. CALCULATE BETA DIVERSITY (PCoA PLOT) FOR BACTERIA --Jaccard
-# dissimilarity indices for community ecologist to make a distance structure (Bray-Curtis distance between samples)
+# dissimilarity indices for community ecologist to make a distance structure 
 otu.pat.pa <- 1*(otu.rare.pat>0)
 otu_dist <- vegdist(t(otu.pat.pa), method='jaccard',binary = T)
 # CMD/classical multidimensional scaling (MDS) of a data matrix. Also known as principal coordinates analysis
@@ -467,7 +473,7 @@ pat.pcoa <- ggplot(data = mapPat, aes(x=ax1.scores, y=ax2.scores))+
        legend.spacing.x = unit(0.05, 'cm'))
 pat.pcoa 
 set.seed(3)
-adonis(otu_dist~mapPat$Treatment)
+adonis(otu_dist~mapPat$Treatment, data =mapPat)
 ggsave("pat.pcoa.tiff",
        pat.pcoa, device = "tiff",
        width = 5, height =4, 
@@ -759,12 +765,20 @@ podnum
 groups <- factor(c(rep("Control",8),rep("Water withholding",8), rep("Nutrient addition",8)))
 otu_dist <- vegdist(t(otu.pat.pa), method='jaccard',binary = T)
 mod <- betadisper(otu_dist, groups)
+mod
 boxplot(mod)
 # Null hypothesis of no difference in dispersion between groups
-anova(mod) # there is significant differences in dispersion between groups
+set.seed(3)
+#permutation-based test for multivariate homogeneity of group dispersion (variances)
+permod <- permutest(mod, permutations = 999, pairwise = T)
+permod # there is significant differences in dispersion between groups
 # the variances among groups are not homogenous,
 hsd=TukeyHSD(mod) #which groups differ in relation to their variances
+hsd
 plot(hsd)
+
+
+
 
 ## Faith's Phylogenetic Diversity
 install.packages("picante")
@@ -1239,8 +1253,129 @@ ggsave("Alpha diversity.tiff",
        width = 8.3, height= 7, 
        units= "in", dpi = 600)
 
+#####################################################################################################################################
+# Distribution of Chloroplast and mitochondria per sample
 
 
+#read the unfiltered otu table 
+otu.unfil <- read.table('OTU_table_tax.txt', sep='\t', header=T, row.names = 1)
+otu.unfil
+tax.unfil <- otu.unfil[,'taxonomy']
+tax.unfil
+#write.csv(tax.unfil, file = "taxonomy.unfil.csv")
+dim(otu.unfil)
+otu.unfil <- otu.unfil[,-25]
+dim(otu.unfil) 
+sort(rowSums(otu.unfil, na.rm = FALSE, dims = 1), decreasing = F)
+
+#read taxonomy
+taxonomy.unfil = read.csv("tax.unfil.ed.csv", header=T)
+rownames(taxonomy.unfil) <- rownames(otu.unfil)
+dim(taxonomy.unfil)
+#read the metadata
+map.pat
+
+# merge the taxonomy with otu table
+head(taxonomy.unfil)
+taxonomy.unfil <- rownames_to_column(taxonomy.unfil, var = "OTUID")
+head(otu.unfil)
+otu.unfil <- rownames_to_column(otu.unfil, var = "OTUID")
+otu.unfil.tax <- merge(otu.unfil, taxonomy.unfil, by="OTUID")
+dim(otu.unfil.tax)
+
+#select only the otu table and "Order"  & "Family"
+colnames(otu.unfil.tax)
+otu.unfil.tax.ed <- otu.unfil.tax[,c(1:26,29,30)]
+colnames(otu.unfil.tax.ed)
+
+#edit the taxonomy
+otu.unfil.tax.ed1 <- otu.unfil.tax.ed %>%
+    mutate(Taxonomy = case_when(Order == "Chloroplast" ~ 'Chloroplast',
+                                  Family == "Mitochondria" ~ 'Mitochondria',
+                                  TRUE ~ 'Bacteria/archaea')) %>%
+    mutate(Domain = case_when(Order == "Chloroplast" ~ 'Plant',
+                                  Family == "Mitochondria" ~ 'Plant',
+                                  TRUE ~ 'Bacteria/archaea'))
+
+tail(otu.unfil.tax.ed1)
+colnames(otu.unfil.tax.ed1)
+otu.unfil.tax.ed2 <- otu.unfil.tax.ed1[,c(1:26,29)]
+colnames(otu.unfil.tax.ed2)
+tail(otu.unfil.tax.ed2)
+
+long.dat <- gather(otu.unfil.tax.ed2, Sample, Read, C1:N8, factor_key = T)
+long.dat
 
 
+df.unfil <- long.dat %>%
+  group_by(Sample, Domain) %>%
+  summarize(read.number = sum(Read))
+df.unfil1 <- df.unfil %>% 
+  group_by(Sample) %>% 
+  mutate(percent= prop.table(read.number) * 100)
 
+with(df.unfil1, sum(percent[Domain ==  "Plant"]))
+
+library(ggbeeswarm)
+library(ggplot2)
+library(ggtext)
+plot.unfil.king <- ggplot(df.unfil1, aes(x=Domain, y=percent, fill=Domain))+
+                    geom_violin(trim = F, scale="width") +
+                    #geom_beeswarm(dodge.width = 1, alpha = 0.3)+
+                    scale_fill_manual(labels = c("Bacteria/archaea","Plant"),values=c("#88CCEE", "#117733"))+
+                    geom_jitter(position = position_jitter(width = 0.1, height = 0, seed=13), alpha=0.3)+
+                    theme_bw()+
+                    expand_limits(x = 0, y = 0)+
+                    #geom_text(data=sum_rich_plant_new, aes(x=Plant,y=2+max.rich,label=Letter), vjust=0)+
+                    labs(title = "A")+
+                    ylab("Read Proportion (%)")+
+                    theme(legend.position="none",
+                          #axis.text.x=element_blank(),
+                          #axis.ticks.x = element_blank(),
+                          axis.title.x = element_blank(),
+                          axis.text= element_text(size = 14),
+                          strip.text = element_text(size=18, face = 'bold'),
+                          plot.title = element_text(size = 14, face = 'bold'),
+                          #axis.title.y=element_text(size=13,face="bold"),
+                          axis.title.y = element_markdown(size=15,face="bold"),
+                          plot.background = element_blank(),
+                          panel.grid.major = element_blank(),
+                          panel.grid.minor = element_blank())+
+                          #plot.margin = unit(c(0, 0, 0, 0), "cm"))
+                          stat_summary(fun="median",geom="point", size=7, color="red", shape=95)
+                          #width=1, position=position_dodge(),show.legend = FALSE)
+
+plot.unfil.king
+
+### Occupancy across control and water withholding plants
+
+otuCD <- data.frame(otu.rare.pat[,c(1:16)])
+colnames(otuCD)
+sort(rowSums(otuCD, na.rm = FALSE, dims = 1), decreasing = TRUE)
+##calculate the occupancy of each otu across control and water withholding plants
+otuCD.PA <- 1*((otuCD>0)==1)
+Occ.CD <- rowSums(otuCD.PA)/ncol(otuCD.PA)
+df.Occ.CD <- as.data.frame(Occ.CD)
+df.Occ.CD <- rownames_to_column(df.Occ.CD, var = "OTUID")
+head(taxonomy.rare.pat)
+tax <- rownames_to_column(taxonomy.rare.pat, var = "OTUID")
+df.Occ.CD.tax <- merge(df.Occ.CD, tax, by="OTUID")
+sort.df.Occ.CD.tax <- df.Occ.CD.tax[order(df.Occ.CD.tax$Occ.CD, decreasing = TRUE),]
+write.csv(sort.df.Occ.CD.tax, file = "sort.occ.CD.csv")
+
+### Occupancy across control and nutrient addition plants
+
+otuCN <- data.frame(otu.rare.pat[,c(1:8,17:24)])
+colnames(otuCN)
+sort(rowSums(otuCN, na.rm = FALSE, dims = 1), decreasing = TRUE)
+##calculate the occupancy of each otu across control and water withholding plants
+otuCN.PA <- 1*((otuCN>0)==1)
+Occ.CN <- rowSums(otuCN.PA)/ncol(otuCN.PA)
+df.Occ.CN <- as.data.frame(Occ.CN)
+df.Occ.CN <- rownames_to_column(df.Occ.CN, var = "OTUID")
+head(taxonomy.rare.pat)
+head(tax)
+tax <- rownames_to_column(taxonomy.rare.pat, var = "OTUID")
+df.Occ.CN.tax <- merge(df.Occ.CN, tax, by="OTUID")
+sort.df.Occ.CN.tax <- df.Occ.CN.tax[order(df.Occ.CN.tax$Occ.CN, decreasing = TRUE),]
+write.csv(sort.df.Occ.CN.tax, file = "sort.occ.CN.csv")

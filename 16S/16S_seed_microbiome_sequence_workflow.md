@@ -1,4 +1,4 @@
-# Raw Sequences Analysis of 16S rRNA gene from Pat data
+# Raw Sequences Analysis of 16S rRNA gene 
 
 ## Analysis of 16S Miseq Data
 Here we used the USEARCH pipeline (v10.0.240_i86linux64) for pre-processing raw sequences data and UPARSE method for OTU clustering (Edgar 2013). Additional analyses were conducted using QIIME
@@ -256,6 +256,8 @@ biom convert -i single_rare.biom -o single_rare.txt --header-key taxonomy --to-t
 
 ### output ###
 single_rare.txt
+
+biom convert -i OTU_table_tax.biom -o OTU_table_tax.txt --header-key taxonomy --to-tsv
 ```
 
 

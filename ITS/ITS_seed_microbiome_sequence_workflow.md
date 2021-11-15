@@ -116,7 +116,7 @@ Length         MaxEE 0.50         MaxEE 1.00         MaxEE 2.00
 ```
 #################################################################
 ```
-
+# We are not doing this step
 # convert fastq to fasta for ITSx 
 module load BBMap/37.93
 reformat.sh in=cut_merged.fastq out=cut_merged.fasta
