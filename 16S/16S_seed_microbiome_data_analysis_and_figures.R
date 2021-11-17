@@ -791,7 +791,9 @@ tree$tip.label
 phyl.pat.obj
 phy_tree(phyl.pat.obj)
 
-## Rhizosphere soil chemistry statistical test
+## Rhizosphere soil chemistry statistical test using one-way analysis of variance (ANOVA). 
+## The normality and homoscedasticity of the data were evaluated using Saphiro-Wilk and Lavene’s test, respectively. 
+## We performed non-parametric Kruskal-Wallis test and post-hoc Dunn’s test with Benjamini-Hochberg correction for p-values if the ANOVA’s assumptions were not meet
 
 ### 1. ph
 
