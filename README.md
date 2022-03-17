@@ -3,7 +3,7 @@
 ## by Ari Fina Bintarti,Patrick Kearns, Abby Sulesky, and Ashley Shade
 
 
-<i>This work has not been published.</i>
+<i>This work is in press at Microbiology Spectrum.</i>
 
 
 ### Data
