@@ -3,7 +3,7 @@
 ## by Ari Fina Bintarti,Patrick Kearns, Abby Sulesky, and Ashley Shade
 
 
-<i>This work is in press at Microbiology Spectrum.</i>
+<i>This work is [published](https://journals.asm.org/doi/10.1128/spectrum.00210-21)in Microbiology Spectrum.</i>
 
 
 ### Data
@@ -11,7 +11,7 @@ The raw data for this study are available in the NCBI SRA under bioproject [PRJN
 
 
 ### To cite this work or code
-Bintarti, AF, P Kearns, A Sulesky and A Shade.  2020.  Abiotic treatment to common bean plants results in an altered seed microbiome.  [bioRXiv](https://www.biorxiv.org/content/10.1101/2020.06.05.134445v2) https://doi.org/10.1101/2020.06.05.134445   
+Bintarti, AF, P Kearns, A Sulesky and A Shade.  2022.  Abiotic treatment to common bean plants results in an altered seed microbiome. Microbiology Spectrum 10:e0021021. doi: 10.1128/spectrum.00210-21. 
 
 
 ### Abstract
